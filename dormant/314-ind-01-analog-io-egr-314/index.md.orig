@@ -1,0 +1,250 @@
+---
+subtitle: Individual Assignment
+title: Analog I/O (PIC)
+---
+
+## Objectives
+
+Many sensors have an analog output that must be digitized using an Analog to Digital converter (ADC) in order to use them in a microcontroller. The PIC's ADC subsystem is the peripheral used to read analog values and convert it into a digital number for use in your program. It can be configured in a variety of ways. In this assignment, you will create an ADC subsystem and program your microcontroller to transmit the result of reading an analog voltage measured at an input pin, using the ADC subsystem in one of its simplest configurations.
+
+Likewise, PWM signals are often used to control a variety of actuators (e.g., servo motors), and, because they provide a proportional time-based signal, can be used in certain circumstances, as an analog output from a microcontroller. In this assignment, you will also program your microcontroller to generate a PWM signal using the measured ADC value, and demonstrate modifying the output of the PWM signal in two key ways.
+
+To demonstrate team proficiency in:
+
+1.  Measuring an analog voltage using an analog to digital converter
+
+2.  Outputting the measured ADC value over EUSART
+
+3.  Converting an ADC value to Voltage and outputting the result over EUSART
+
+4.  Changing a pulse-width modulation (PWM) signal
+
+    1.  With a specific duty cycle from your microcontroller output pin.
+
+    2.  By changing the frequency of the cycle itself
+
+**This is an individual assignment.**
+
+## Resources
+
+-   [*PIC18F47Q10 Datasheet*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf)
+
+-   [*PIC18F47Q10 Curiosity Nano*](https://www.microchip.com/Developmenttools/ProductDetails/DM182029) Microchip Main Page
+
+    -   [*Hardware User Guide*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F47Q10-Curiosity-Nano-Hardware-User-Guide-40002103B.pdf)
+
+    -   [*Design Documentation*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F47Q10-CNANO_Design_Documentation_Rev5.zip)
+
+    -   [*Schematic*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F47Q10-CNANO_Schematics.pdf)
+
+-   [*XC8 Compiler Documentation*](http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB_XC8_C_Compiler_User_Guide_for_PIC.pdf)
+
+-   Microchip developer [*tutorials site*](https://microchipdeveloper.com/)
+
+-   Analog and ADC's
+
+    -   Analog input - Scherz & Monk, Chapter 13.5.2
+
+    -   [*ADC and LCD with MPLAB Code Configurator*](https://www.youtube.com/watch?v=4WaB_Lj8FnY&list=PL3lfkED2i6JcJH-OETxsI43e8M-7eLeL-&index=22) video
+
+    -   [*PIC18F47Q10 Datasheet*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf), section X.Y.Z on ADC$^{\text{2}}$
+
+-   Pulse Width Modulation (PWM)
+
+    -   Pulse-width modulation - Scherz & Monk, Chapter 13.5.3, 14.4,
+
+    -   [PWM Tutorial from AfroTechMods.com](http://www.afrotechmods.com/groovy/PWM_tutorial/PWM_tutorial.htm)
+
+-   Potentiometers - Scherz & Monk, Chapter 3.5.6 and 3.5.7
+
+-   C Information
+
+    -   [*GNU C Reference Manual*](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html)
+
+    -   tutorial on [*type casting*](https://www.tutorialspoint.com/cprogramming/c_type_casting.htm)
+
+    -   article on [*bit shifting*](https://www.geeksforgeeks.org/left-shift-right-shift-operators-c-cpp/)
+
+## Prior to Demonstration of Proficiency
+
+*You may use your Nano board or a breadboard with your microcontroller on it.*
+
+1.  Study the following critical information and concepts:
+
++-----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| **Critical Information and Concepts**                                                                           | **Importance**                                                                                                                                                                                                                                                                   |
++=================================================================================================================+==================================================================================================================================================================================================================================================================================+
+| a.  How to shift bits of a number or variable (needed to manipulate data in an 8-bit variable)                  | Needed to manipulate data in variables. Can be found in a C programming reference, such as the [*GNU C Reference Manual*](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html)                                                                                           |
+|                                                                                                                 |                                                                                                                                                                                                                                                                                  |
+| b.  How to mask bits of a number or variable (needed to read or write specific bits in an 8-bit variable)       |                                                                                                                                                                                                                                                                                  |
+|                                                                                                                 |                                                                                                                                                                                                                                                                                  |
+| c.  How to cast a variable as a different data type (needed to convert variables from one data type to another) |                                                                                                                                                                                                                                                                                  |
++-----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| d.  Which pin of the Curiosity Nano board outputs the regulated power used by the "target" (the PIC18F47Q10)    | Needed to know where you can access power and ground on the Curiosity Nano board. Can be found in the [*Curiosity Nano Hardware User Guide*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F47Q10-Curiosity-Nano-Hardware-User-Guide-40002103B.pdf)                      |
+|                                                                                                                 |                                                                                                                                                                                                                                                                                  |
+| e.  All of the ground pins                                                                                      |                                                                                                                                                                                                                                                                                  |
++-----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| f.  How much current can a digital I/O pin on the PIC18F47Q10 safely source or sink?                            | Needed to match the current needs of external loads with the IC and determine whether you need interface circuitry (e.g., a transistor). Can be found in the [*PIC18F47Q10 Datasheet*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf) |
++-----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| g.  How many bits wide is the result of an ADC read?                                                            | Needed to read, interpret, and write data to and from the ADC and PWM peripherals. Can be found in the [*PIC18F47Q10 Datasheet*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf)                                                       |
+|                                                                                                                 |                                                                                                                                                                                                                                                                                  |
+| h.  How many bits wide is the PWM timer register?                                                               |                                                                                                                                                                                                                                                                                  |
++-----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+2.  Make a copy of last week's homework project and open it. You will modify this project to read an ADC value and add an LED controlled by a slow PWM signal so that the blinking is visible.
+
+3.  Open the project in MPLabX and MCC, then add and configure the following peripherals:
+
+    a.  System Module:
+
+        i.  Maintain the settings from HW1 (Set the system clock to the HFINTOSC at 4MHz, with a clock division of 4, disable the Watchdog timer)
+
+    b.  EUSARTX:
+
+        i.  Maintain the settings from HW1
+
+    c.  ADCC
+
+        i.  Ensure right result alignment (this means the data is right-justified in the result register)
+
+        ii. Do not select continuous operation
+
+        iii. Keep all other defaults
+
+    d.  PWMX
+
+        i.  Note the Timer Source (you will need this for the next step)
+
+        ii. Set the initial duty cycle to 50%
+
+        iii. Keep all other defaults
+
+    e.  TMRX, where X is a specific timer that must be matched to the PWM subsystem selected.
+
+        i.  Use the FOSC/4 setting (you will get an error otherwise).
+
+        ii. Use the highest prescaling possible (to ensure the timer counts slowly)
+
+        iii. Set the timer period to the maximum possible (to further slow down the count so that the LED blinks slowly)
+
+        iv. Keep all other defaults
+
+> ***Pay attention to and follow all instructions provided by the MCC's warnings and errors in the Notifications [MCC] window***
+
+4.  Going to the pin module, select pins for the new I/O (in addition to the pins selected last week for EUSART and your EUSART LED indicator.)
+
+    a.  The ANx analog input pin
+
+    b.  The PWMX output pin
+
+5.  In the Pin settings(in the resources window), ensure that the PWM pin is set as a digital output (leave "analog" unchecked), that the ADCX pin is marked as analog, and is an input.
+
+6.  Generate the MCC configuration
+
+7.  Open up ADCX.h
+
+    a.  Find the function that permits you read a single ADC value (conversion). Copy the example code into main.c
+
+        i.  *Hint:* Pay attention to the number of bits in adc_result_t in the typedef statement. This will be important later.
+
+        ii. *Note:* The example code has an error. The following line:
+            > adcX_channel_t convertedValue;
+            > 
+            > should be as follows instead:
+            > adc_result_t convertedValue;
+
+    b.  Find the declared constant for the ADC input pin you have configured (hint: check the Pin Module). Supply this value as the input to the ADC single-read function.
+
+    c.  You will need to define a new variable to use the output of this function. Refer to the commented out example code to determine the appropriate data type for the variable.
+
+8.  Open up PWMX.h
+
+    a.  Find the function that permits you to set the duty cycle. Copy the example code into main.c
+
+    b.  You will need to define a new variable to use the output of this function. Refer to the commented out example code to determine the appropriate datatype.
+
+9.  Open up TMRX.h
+
+    a.  Find the function that permits you to set the period register. Copy the example code into main.c but leave it commented out for now
+
+    b.  You will need to define a new variable to use the output of this function. Refer to the commented out example code to determine the appropriate datatype. Add a new line of code for using the ADC value you read and converted previously to change the PWM duty cycle.
+
+10. Now tie these new functions together into your main.c:
+
+    a.  Add a new line of code to read a single value from the ADC and store it in a variable of the correct type. Refer to the adc subsystem header file generated by MCC to find the correct data type.
+
+    b.  Next, add a new line of code to output the data stored in that variable to EUSART using printf(). Make sure to add carriage return and newline characters to clean up your transmission so that each new ADC value is output on a new line in Putty.
+
+> *Hint:* Remember that X bit variables will have values between 0 and 2$^{\text{X}}$-1. If you are printing numbers outside of that range then something is incorrect with your conversion. See Microchip's documentation on [*printf*](https://microchipdeveloper.com/tls2101:printf)() for more information.
+
+c.  Next, add a new variable with type *float* and use it to translate the integer ADC value to a decimal value that represents the voltage read on the ADC pin. Output that floating point value using the printf() function and the format specifier section of the printf()documentation linked in the previous step and as seen in the MPLABX tutorial. Your data should print on two lines, e.g.:
+
+> ADC value: 255
+>
+> ADC voltage: 3.300
+>
+> *NOTE:* This may require a brush up on data types and [*converting*](https://www.oreilly.com/library/view/c-in-a/0596006977/ch04.html) or [*type casting*](https://www.tutorialspoint.com/cprogramming/c_type_casting.htm) from int to float in C.
+
+d.  Add a new line of code for using the ADC value you read and converted previously to change the PWM duty cycle. This is the raw ADC value before you converted it again to voltage.
+
+> *Context:* Changing the duty cycle changes the *percentage* of the time a square wave is low or high. Variable duty cycles are often used for driving RC Servos or -- in conjunction with a low pass filter -- for approximating a simple and low-fidelity digital to analog converter(DAC).
+>
+> Ensure you are converting the X-bit ADC value to a properly-formatted Y-bit duty cycle value. (Though the functions that operate on these two registers accept 16-bit variables, they only use the least significant / bottom X and Y bits of each 16-bit variable). The information about the size of X and Y was found by you in the first steps of this assignment.
+>
+> *More Context:* The X-bit resolution(see [*PIC18F47Q10 Datasheet*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf)) ADC result is stored in a 16-bit variable of type adc_result_t, which is wider (more bits) than the resolution of the ADC result. Furthermore, the PWM duty cycle register holds fewer bits than the resolution of the ADC. Thus, we want to transfer the [*most significant bits*](https://en.wikipedia.org/wiki/Bit_numbering) of the ADC's reading into the PWM's duty cycle register. The least significant bits of the ADC represent such a small difference in the final result that they can be truncated (cut off).
+>
+> Write a line of code that uses a C [*bit shifting*](https://www.tutorialspoint.com/cprogramming/c_bitwise_operators.htm) operator to shift the ADC result so that the most significant 8 bits of the ADC's output are used as an input to the PWM subsystem's duty cycle update function (look in the PWM header file). Be sure to "cast" this variable into the correct type declared by that function.
+> 
+> After shifting, the lower 8 bits of your adc_result_t variable should look like this (where x is the number of resolution bits for the ADC):
+
+|      |          |          |          |          |          |          |          |          |
+|:-----|:---------|:---------|:---------|:---------|:---------|:---------|:---------|:---------|
+| ... | $ C_{x-1}$ | $ C_{x-2}$ | $ C_{x-3}$ | $ C_{x-4}$ | $ C_{x-5}$ | $ C_{x-6}$ | $ C_{x-7}$ | $ C_{x-8}$ |
+
+e.  Now, add two new lines of code for using the ADC value you read previously to alter the frequency of the PWM (with duty cycle of 50%).
+
+> *Context:* Changing the frequency of the PWM subsystem is useful for generating square waves at different frequencies. This can be useful for generating variable frequency audio tones, timing signals, metronomes, and other frequency-based outputs.
+>
+> *Note*: This may be done by altering the TMRX period register ***AND*** duty cycle register simultaneously by using the functions you found earlier. ***Read the PIC18F47Q10 [*Datasheet*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf) PWM Chapter***, especially figure 22-2 to understand why and how to update the PWM duty cycle whenever you change the TMRX register to maintain a 50% duty cycle.
+
+11. Add a potentiometer to your system
+
+    a.  Connect the wiper pin of a potentiometer to the analog input pin
+
+    b.  Connect the other two pins of the potentiometer to the Curiosity Nano's regulated 3.3V power and ground (see the power supply section of the [*Hardware User Guide*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F47Q10-Curiosity-Nano-Hardware-User-Guide-40002103B.pdf) for more information, and verify with your DMM prior to connecting the potentiometer).
+
+12. Add an **external** LED & resistor to the PWM output pin so that the LED *safely* turns on whenever the PWM output is high. (safely means that neither the LED nor the microcontroller pin burns out. Select an appropriate current-limiting resistor based on the LED specifications and the PIC18F47Q10 maximum pin current in the [*Datasheet*](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf))
+
+13. Demonstrate, by commenting out just the lines of code from 10(c) or 10(d) that the voltage read by the ADC can be used to alter 1) the duty cycle of the PWM signal, or 2) the frequency of the PWM signal.
+
+## Individual Demonstration of Proficiency
+
+*You must complete the demonstration individually, either in office hours or in class if time permits.*
+
+1.  Connect your Curiosity Nano to a computer via USB. Open your MPLabX project. Generate MCC. Compile the program, and program your board.
+
+2.  Demonstrate the ability to read an analog value and output it over EUSART.
+
+3.  Demonstrate control over the *duty cycle* of your PWM-driven LED running at a 131.072ms timer period based on the potentiometer's input.
+
+4.  Demonstrate control over the *frequency* of the PWM-driven LED running at 50% duty cycle from the potentiometer's input.
+
+## Submission
+
+No Canvas submission is necessary. Complete your demonstrations by the deadline in the course calendar on [*Canvas*](https://canvas.asu.edu). Late demonstrations will be graded per the policy in the syllabus.
+
+## Grading
+
++---------------------------------------------+------------+
+| **Demonstration**                           | **Points** |
++=============================================+============+
+| 1.  Connect, compile, generate, and program | 60         |
++---------------------------------------------+------------+
+| 2.  Read Analog to EUSART                   | 80         |
++---------------------------------------------+------------+
+| 3.  Read analog to PWM Duty Cycle           | 80         |
++---------------------------------------------+------------+
+| 4.  Read analog to PWM Frequency            | 80         |
++---------------------------------------------+------------+
+| **Total**                                   | **300**    |
++---------------------------------------------+------------+
