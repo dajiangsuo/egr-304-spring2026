@@ -1,0 +1,1203 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+            
+
+        
+
+    
+      
+        <title>304 HW4 -- Amplifying Analog Signals - EGR304-S-2025 Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objectives" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-header__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EGR304-S-2025 Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              304 HW4 -- Amplifying Analog Signals
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  304
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-nav__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    EGR304-S-2025 Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    304
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    304
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    project description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3X4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3X4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    course sequence requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    submission best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#walkthrough-video-thanks-ean" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Walkthrough Video (Thanks Ean)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parts-tools-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parts &amp; Tools Needed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-to-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prior to Verification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prior to Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#psoc-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PSoC Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuit-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Circuit Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oscilloscope-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Oscilloscope Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inverting-op-amp-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inverting Op-Amp Circuit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-inverting-op-amp-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-inverting Op-Amp Circuit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-schematic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2: Schematic
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Schematic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resources_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individual Demonstration of Proficiency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canvas-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas Submission
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Canvas Submission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#psoc-creator-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PSoC Creator Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schematic-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schematic Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source/edit/main/docs/304/304-ind-04-amplifying-analog-signals/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>304 HW4 -- Amplifying Analog Signals</h1>
+
+<blockquote>
+<p><strong>This is an individual homework assignment</strong> but you may work with others to determine how to complete the assignment.  All work demonstrated in checkoff must be completed by you on your own board.</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>The purpose of this assignment is to understand how Op-Amps can be used to amplify the current change in a device and output it as a voltage. We will be building two circuits: an inverting amplifier, and a noninverting amplifier, and learning about the differences. The signal you read will be derived from HW3's PWM Output</p>
+<p><strong>An individual live demonstration of Parts 3, 4, &amp; 5 (which includes Parts 1 and 2) of this assignment is required.</strong></p>
+<h2 id="walkthrough-video-thanks-ean">Walkthrough Video (Thanks Ean)</h2>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ttM15kePqQI?si=wmPTqqQbPiV4AH3s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://embedded-systems-design.github.io/enable-floating-point-support/">Enable floating point support</a> in PSoC Creator</li>
+<li>Videos<ul>
+<li><a href="https://www.youtube.com/watch?v=ttM15kePqQI">Video Walkthrough</a> (Thanks Ean)</li>
+<li><a href="https://youtu.be/sMMXunHu-to">Older Video Walkthrough</a> (Thanks Milan!)</li>
+<li>Oscilloscope output: <a href="https://youtu.be/JBDF59Gd5ks">https://youtu.be/JBDF59Gd5ks</a></li>
+</ul>
+</li>
+<li>Scherz, P., &amp; Monk, S. (2016). <a href="https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1470699914&amp;sr=1-1&amp;keywords=practical+electronics+for+inventors+4th+edition">Practical electronics for inventors, fourth edition.</a> New York: McGraw Hill. ISBN: 978-1259587542 <em>(</em><em>many</em><em> circuit design resources)</em><ul>
+<li>Chapter 8: Operational Amplifiers</li>
+</ul>
+</li>
+<li><strong>Oscilloscopes</strong><ul>
+<li>Scherz &amp; Monk, Chapter 7.4</li>
+<li><a href="http://esdresources.blogspot.com/2016/01/peralta-103-resources.html">Agilent MSO-X 4024A Oscilloscope User's Guide, pages 35-42 (Auto Scale) and pages 256-264 (Time Measurements)</a> <em>-or-</em></li>
+<li><a href="http://esdresources.blogspot.com/2016/01/peralta-103-resources.html">Agilent MSO 7054A Oscilloscope User's Guide, page 177 (AutoScale) and pages 192-205 (Time Measurements)</a></li>
+</ul>
+</li>
+<li>Canvas discussion board</li>
+<li>CY8CKIT-042 evaluation board (<a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/">main page</a>) (<a href="https://www.infineon.com/dgdl/Infineon-CY8CKIT-042_PSoC_4_Pioneer_Kit_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0eeec6a57e1e">kit guide</a>)</li>
+<li>CY8CKIT-042-BLE evaluation board (<a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/">main page</a> / <a href="https://www.infineon.com/dgdl/Infineon-CY8CKIT-042-BLE-A_Bluetooth_Low_Energy_Pioneer_Kit_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0efc8fdb12b6">kit guide</a>)</li>
+</ul>
+<h2 id="parts-tools-needed">Parts &amp; Tools Needed</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Item</strong></th>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: left;"><strong>Detail</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">LM324N</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(<a href="https://www.digikey.com/en/products/detail/texas-instruments/LM324N/277627">Digikey</a> / <a href="https://www.ti.com/lit/ds/symlink/lm224.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&amp;ts=1664291051389">datasheet</a> )</td>
+</tr>
+<tr>
+<td style="text-align: left;">DAC low-pass filter circuit from HW3 Part 3</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">See HW3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Voltage Regulator circuit from HW1 <em>(optional)</em></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">See HW1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resistors</td>
+<td style="text-align: left;">multiple</td>
+<td style="text-align: left;">2 x 10 kΩ and 2 x 1 kΩ</td>
+</tr>
+<tr>
+<td style="text-align: left;">Potentiometers</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">10 kΩ</td>
+</tr>
+<tr>
+<td style="text-align: left;">Breadboard</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Jumper wire</td>
+<td style="text-align: left;">many</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Benchtop Oscilloscope</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Benchtop Power Supply</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="prior-to-verification">Prior to Verification</h2>
+<h3 id="psoc-preparation">PSoC Preparation</h3>
+<blockquote>
+<p><strong>Before you Start:</strong> Confirm that your pioneer board power jumper is set to 5V to ensure full 0-5V operation.</p>
+<p>CY8CKIT-042: See Section 4.3.3 of the kit guide, along with Figures 4-1 and 4-4</p>
+<p>CY8CKIT-042-BLE: See Section 5.1.2 of the kit guide, along with Figures 1-2 and 5-1.</p>
+</blockquote>
+<ol>
+<li>Once HW3 is checked off, <strong>keep the connection from the PWM_4 subsystem to the low-pass filter on your breadboard in place.</strong> You may disconnect the output jumper wires connecting the PSoC to the MOSFET and FAN80100N motor driver.</li>
+<li>Copy the HW3 "PWMAnalog" project into a new workspace named "HW4"</li>
+<li><a href="https://embedded-systems-design.github.io/enable-floating-point-support/">Modify the project</a> to enable floating point number printing support in PSoC Creator.</li>
+<li>Open <code>main.c</code>. Replace the contents with the following lines, then compile and download:<pre><code>#include "project.h"
+#include "math.h"
+
+#define PI 3.141592
+
+float frequency = 10; //Hz
+float offset = 2.8; //Volts
+float amplitude = .25; //Voltage
+
+long time_milli = 0;
+float voltage = 0;
+int out = 0;
+int DAC_max = 0xff;
+float V_max = 5.0;
+
+int main(void)
+{
+    CyGlobalIntEnable;
+    PWM_1_Init();
+    PWM_1_Start();
+
+    for(;;)
+    {
+        time_milli+=1;
+        voltage = (amplitude*sin(2.0*PI*frequency*time_milli/1000))+offset;
+        out = (int)(voltage/V_max*DAC_max);
+        PWM_1_WriteCompare(out);
+        CyDelay(1);
+    }
+}
+</code></pre>
+</li>
+</ol>
+<h3 id="circuit-preparation">Circuit Preparation</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image2.png" data-desc-position="bottom"><img alt="" src="image2.png" style="max-height:200px;"></a></p>
+<p><em><strong>Figure 1:</strong> Inverting and noninverting circuits</em></p>
+<ol>
+<li>Construct the circuit in Figure 1 above.</li>
+<li>Connect the output of the low-pass filter on your breadboard from HW3 to the positive input to the op-amp's "A" circuit. ("V_low_pass_in" connected to U1A's pin 3, see Figure 1 above).</li>
+</ol>
+<h3 id="oscilloscope-setup">Oscilloscope Setup</h3>
+<ol>
+<li>Turn on the oscilloscope<ol>
+<li>Turn on channel 1, 2, and 3; turn off all other channels.</li>
+<li>Set the Gain for all channels to 2 V/div</li>
+<li>Set the offset for all channels to zero.</li>
+</ol>
+</li>
+<li>Connect the channel 1 oscilloscope probe to the "V_low_pass_in" signal on your breadboard.</li>
+<li>Connect the grounded alligator clip of the channel 1 oscilloscope probe to the ground rail of your breadboard.</li>
+<li>Using the oscilloscope's measurement tool, add a measurement to measure the peak-to-peak voltage, average voltage, and frequency on channel 1.</li>
+<li>Verify that the settings are correct using the oscilloscope. Adjust the time window until you see multiple waveforms on channel 1.</li>
+</ol>
+<h3 id="inverting-op-amp-circuit">Inverting Op-Amp Circuit</h3>
+<ol>
+<li>Connect the signal coming from Vout1 to the channel 2 oscilloscope probe, as noted.</li>
+<li>Connect the grounded alligator clip of the channel 2 oscilloscope probe to the ground rail of your breadboard.</li>
+<li>Using the measurement tool, add a measurement to measure the peak-to-peak voltage, average voltage, and frequency on channel 2</li>
+<li>Adjust the (RV1) potentiometer and the "offset" variable in your code until you achieve the maximum gain without cutting off the output signal read on channel 2 of the oscilloscope.</li>
+<li>Compare the output and measurements of channel 1 and 2. How do they differ?</li>
+</ol>
+<h3 id="non-inverting-op-amp-circuit">Non-inverting Op-Amp Circuit</h3>
+<ol>
+<li>Code changes: Update the existing line in your code to support voltage conversion:</li>
+</ol>
+<p><code>float offset = .75;</code></p>
+<ol>
+<li>Compile and download your changes to the PSoC</li>
+<li>Connect the signal coming from Vout2 above (in Figure 1 above) to the channel 3 oscilloscope probe.</li>
+<li>Connect the grounded alligator clip of the channel 3 oscilloscope probe to the ground rail of your breadboard.</li>
+<li>Using the measurement tool, add a measurement to measure the peak-to-peak voltage, average voltage, and frequency on channel 3</li>
+<li>Adjust the potentiometer and the "offset" variable in your code until you achieve the maximum gain without cutting off the output signal read on channel 2 of the oscilloscope.</li>
+<li>Compare the output and measurements of channel 1 and 3. How do they differ?</li>
+</ol>
+<h2 id="part-2-schematic">Part 2: Schematic</h2>
+<h3 id="resources_1">Resources</h3>
+<ul>
+<li>KiCad<span class="arithmatex">\(^1\)</span> <a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html">Getting Started</a> Pages on the KiCad<span class="arithmatex">\(^1\)</span> website:<ul>
+<li>Introduction to KiCad<span class="arithmatex">\(^1\)</span>: <a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#download-and-install-kicad">Download and Install</a></li>
+<li><a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#basic_concepts_and_workflow">Basic Concepts and Workflow</a></li>
+<li><a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#tutorial_part_1_project">Tutorial 1: Project</a></li>
+<li><a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#tutorial_part_2_schematic">Tutorial 2: Schematic</a></li>
+</ul>
+</li>
+<li><a href="https://embedded-systems-design.github.io/kicad/kicad-schematic-design/">KiCad<span class="arithmatex">\(^1\)</span></a> schematic posts:<ul>
+<li><a href="https://embedded-systems-design.github.io/kicad-symbol-creation/">Symbol Creation</a></li>
+<li><a href="https://embedded-systems-design.github.io/kicad-schematic-capture/">Schematic Capture</a></li>
+<li><a href="https://embedded-systems-design.github.io/kicad-common-pin-types/">Common Pin Types and their Meanings</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://embedded-systems-design.github.io/cadence/">Cadence</a> posts</p>
+<ul>
+<li><a href="https://embedded-systems-design.github.io/creating-a-custom-library-in-cadence/">Creating a custom library in Cadence</a></li>
+<li><a href="https://embedded-systems-design.github.io/creating-a-custom-schematic-symbol-in-cadence/">Creating a custom schematic symbol in Cadence</a></li>
+<li><a href="https://embedded-systems-design.github.io/creating-a-new-project-in-cadence/">Creating a new project in Cadence</a></li>
+</ul>
+</li>
+<li>
+<p>Create a schematic for both of the circuits used above. Following the resources for KiCad<span class="arithmatex">\(^1\)</span> or Cadence above, duplicate the op-amp circuits that you built.</p>
+<ol>
+<li>You may use the LM324 op-amp included in the KiCad<span class="arithmatex">\(^1\)</span> symbol library.</li>
+<li>Add all other components, including the voltage used, resistors and resistance values selected, etc.</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p><em>KiCad<span class="arithmatex">\(^1\)</span>:</em> Wherever possible, use the "US" version of parts, including "R_US" instead of "R", "C_US" instead of "C", and "C_Polarized_US" instead of "C_Polarized", etc.</p>
+<p><em>Kicad<span class="arithmatex">\(^1\)</span>:</em> Like the US/International part symbol differences, make sure you use "earth" ground for the ground symbol rather than the default "GND" symbol.</p>
+</blockquote>
+<ol>
+<li>Export your schematic to PDF</li>
+</ol>
+<blockquote>
+<p><em>KiCad<span class="arithmatex">\(^1\)</span>:</em> Follow the instructions for <a href="https://embedded-systems-design.github.io/packaging-kicad-files-for-submission/">Packaging KiCad<span class="arithmatex">\(^1\)</span> Files for Submission</a></p>
+<p><em>Cadence:</em>Follow the instructions for <a href="https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/">Packaging Cadence Files for Submission</a></p>
+</blockquote>
+<ol>
+<li>Package your files for submission to Canvas</li>
+</ol>
+<h2 id="individual-demonstration-of-proficiency">Individual Demonstration of Proficiency</h2>
+<p>You must complete the demonstration individually, either in office hours or in class if time permits. <strong>Demonstrations can be done up to the last office hours on the due date noted in Canvas. This assignment can not be demonstrated on Zoom on Saturdays due to the need for an oscilloscope.</strong>  <strong>No late demonstrations will be accepted</strong></p>
+<ol>
+<li>Properly set oscilloscope display settings on channels 1, 2, and 3.</li>
+<li>Properly set oscilloscope measurement settings on channels 1, 2, and 3.</li>
+<li>Properly controlled sinusoidal analog signal on channel 1, verified by oscilloscope.</li>
+<li>Inverting op-amp: Properly amplified output signal on channel 2, verified by oscilloscope.</li>
+<li>Non-Inverting op-amp: Properly amplified output signal on channel 3, verified by oscilloscope.</li>
+</ol>
+<p><strong>Successful demonstration of Parts 3, 4, and 5 is sufficient for demonstrating all five parts.</strong></p>
+<h2 id="canvas-submission">Canvas Submission</h2>
+<p>Submit the items below to Canvas by the deadline given (in Canvas). <strong>Do not submit screenshots.</strong> <em>Do not submit links to Google documents.</em> It is your responsibility to ensure that your submission to Canvas was successful. Late Canvas submissions will be graded per the policy in the syllabus. No credit will be awarded for assignments not submitted via Canvas.</p>
+<h3 id="psoc-creator-files">PSoC Creator Files</h3>
+<p>Submit your packaged PSoC Creator workspace (right-click on the Workspace, select "Archive Workspace/Project..." from the contextual menu, and select a Minimal archive) in ZIP format to this assignment on <a href="http://canvas.asu.edu">Canvas</a> by the deadline in Canvas. Do not submit links to Google documents.</p>
+<h3 id="schematic-files">Schematic Files</h3>
+<p>Follow the instructions for packaging your schematic (<a href="https://embedded-systems-design.github.io/packaging-kicad-files-for-submission/">KiCad<span class="arithmatex">\(^1\)</span></a>)(<a href="https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/">Cadence</a>) to create a PDF and ZIP archive (including all library files) for your project. Submit <strong>both</strong> the PDF and ZIP archive as separate documents to this assignment on <a href="https://canvas.asu.edu">Canvas</a> by the deadline in Canvas.</p>
+<h2 id="grading">Grading</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demonstration Part 1: Oscillocope Display Settings</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Demonstration Part 2: Oscilloscope Measurement Settings</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Demonstration Part 3: Sinusoidal Analog Signal</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Demonstration Part 4: Amplified Inverted Output Signal</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Demonstration Part 5: Amplified Non-Inverted Output Signal</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Separate ZIP file of single PSoC HW4 Workspace including all projects</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Legible PDF of Schematic <em>(-5 points for each mistake)</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td>Separate ZIP file including updated library and new symbols <em>(-5 points for each mistake)</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>300</strong></td>
+</tr>
+</tbody>
+</table>
+<p>You must submit to Canvas <strong>and</strong> demonstrate your solution in order to receive credit. Late submissions and demonstrations will be graded per the policy in the syllabus.</p>
+<p><span class="arithmatex">\(^1\)</span> KiCad is only permitted in EGR304</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2024 Dan Aukes and Shawn Jordan
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,0 +1,1464 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+            
+
+        
+
+    
+      
+        <title>Project Checkpoint 2: Design Review - EGR304-S-2025 Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-header__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EGR304-S-2025 Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Project Checkpoint 2: Design Review
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  304
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-nav__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    EGR304-S-2025 Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    304
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    304
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    project description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3X4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3X4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    course sequence requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    submission best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schedule
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-to-the-design-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prior to the Design Review
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prior to the Design Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prior-to-the-design-review-prepare-presentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prior to the Design Review: Prepare Presentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prior-to-the-design-review-update-project-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prior to the Design Review: Update Project Report
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prior to the Design Review: Update Project Report">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formatting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Content
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#during-the-design-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        During the Design Review
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-the-design-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After the Design Review
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="After the Design Review">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-process-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Process Feedback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-update-design-and-project-report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Update Design and Project Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-update-team-folder-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Update Team Folder Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Update Team Folder Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Content
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submission
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Submission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Canvas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-drive-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Google Drive Folder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Report
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presentation-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Presentation File
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source/edit/main/docs/304/304-team-11-checkpoint-2/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>Project Checkpoint 2: Design Review</h1>
+
+<p><strong><em>Team Assignment</em></strong></p>
+<h2 id="introduction">Introduction</h2>
+<p>A <em>design review</em> is a common industry process during which a design is critiqued by colleagues and stakeholders with the intent of providing critical feedback, discovering errors, and making suggestions of improvements prior to the implementation of a design.</p>
+<p>In this activity, your team will both (1) present and discuss your design, and (2) provide feedback on others' designs by asking questions and completing a detailed evaluation checklist.</p>
+<p>Checkpoint 2 presentations will be presented on Monday and Wednesday in Cooley Ballroom A, as noted in the course calendar. <strong>Do not come to the classroom on these days.</strong></p>
+<p>The objectives of this checkpoint are to:</p>
+<ol>
+<li>Update the living project report document and populate it with deliverables for grading.</li>
+<li>Update the virtual collaboration space where your team shares design documents.</li>
+<li>Present your project in its current form.</li>
+<li>Receive detailed feedback on your team's progress.</li>
+</ol>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="/304/304-team-06-checkpoint-1/">Checkpoint 1 Assignment</a></li>
+<li>Student Reviewer Forms<ul>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc9Q-Yy5xXezIs30mXPcZBnAkkkNE6rt1G5p5d3cY1q0AhCyw/viewform?usp=sf_link">Student Reviewer 1 Form</a></li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSfkRPJnfIoTdWTP9onHiQP6ClboRvD_hrsxHRWx6A6bPUSIxQ/viewform?usp=sf_link">Student Reviewer 2 Form</a></li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdcGXnXAmxt6VHQHdp7iLmt1kjnqBJZE_sDxBXwX-alDeqpjA/viewform?usp=sf_link">Student Reviewer 3 Form</a></li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeEgyoyuShjX5RRQMBgrGwyozbhdTH4251c7EUSSy671zM-Ww/viewform?usp=sf_link">Student Reviewer 4 Form</a></li>
+</ul>
+</li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeLQ2Mn9p_EcPVHOEL3FSkHukL86Oq_O8KXb2ENP2l6fmt-uw/viewform?usp=sf_link">External Reviewer Form</a></li>
+<li>Canvas discussion board</li>
+</ul>
+<h2 id="format">Format</h2>
+<p>Design reviews will span over two days of class. On each day, half of the teams in the class will present their designs for feedback for 25 minutes, twice, to two different groups of students, faculty, and/or industry professionals. The other half of the teams will review the teams that are presenting. Teams that are not presenting will provide feedback through the checkpoint review forms linked above.</p>
+<p>Design reviews will be <strong>in-person in Cooley Ballroom A.</strong> Attendance will be taken on both design review days.</p>
+<p><strong>Dress is business casual on both days of design reviews.</strong></p>
+<p>Attendance will be taken on both design review days.</p>
+<p>During the design review, you will share links to a Google Slides presentation and updated report with reviewers, and give the presentation using Zoom screen sharing from your computer. Reviewers may ask questions both during and after your presentation.</p>
+<p><strong>Dress is business casual for any part of you visible on camera on both days of design reviews.</strong></p>
+<h2 id="schedule">Schedule</h2>
+<p><em>Checkpoint 2 dates are shown in the calendar on Canvas</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Monday</strong></th>
+<th style="text-align: left;"><strong>Monday</strong></th>
+<th style="text-align: left;"><strong>Wednesday</strong></th>
+<th style="text-align: left;"><strong>Wednesday</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Presenting</strong></td>
+<td style="text-align: left;"><strong>Reviewing</strong></td>
+<td style="text-align: left;"><strong>Presenting</strong></td>
+<td style="text-align: left;"><strong>Reviewing</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">101</td>
+<td style="text-align: left;">102, 104</td>
+<td style="text-align: left;">102</td>
+<td style="text-align: left;">101, 103</td>
+</tr>
+<tr>
+<td style="text-align: left;">103</td>
+<td style="text-align: left;">104, 106</td>
+<td style="text-align: left;">104</td>
+<td style="text-align: left;">103, 105</td>
+</tr>
+<tr>
+<td style="text-align: left;">105</td>
+<td style="text-align: left;">106, 108</td>
+<td style="text-align: left;">106</td>
+<td style="text-align: left;">105, 107</td>
+</tr>
+<tr>
+<td style="text-align: left;">107</td>
+<td style="text-align: left;">108, 102</td>
+<td style="text-align: left;">108</td>
+<td style="text-align: left;">107, 101</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Monday</strong></th>
+<th style="text-align: left;"><strong>Monday</strong></th>
+<th style="text-align: left;"><strong>Wednesday</strong></th>
+<th style="text-align: left;"><strong>Wednesday</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Presenting</strong></td>
+<td style="text-align: left;"><strong>Reviewing</strong></td>
+<td style="text-align: left;"><strong>Presenting</strong></td>
+<td style="text-align: left;"><strong>Reviewing</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">201</td>
+<td style="text-align: left;">202, 204</td>
+<td style="text-align: left;">202</td>
+<td style="text-align: left;">201, 203</td>
+</tr>
+<tr>
+<td style="text-align: left;">203</td>
+<td style="text-align: left;">204, 206</td>
+<td style="text-align: left;">204</td>
+<td style="text-align: left;">203, 205</td>
+</tr>
+<tr>
+<td style="text-align: left;">205</td>
+<td style="text-align: left;">206, 208</td>
+<td style="text-align: left;">206</td>
+<td style="text-align: left;">205, 207</td>
+</tr>
+<tr>
+<td style="text-align: left;">207</td>
+<td style="text-align: left;">208, 210, TT</td>
+<td style="text-align: left;">208</td>
+<td style="text-align: left;">207, 209</td>
+</tr>
+<tr>
+<td style="text-align: left;">209</td>
+<td style="text-align: left;">210, 212, TT</td>
+<td style="text-align: left;">210</td>
+<td style="text-align: left;">209, 211</td>
+</tr>
+<tr>
+<td style="text-align: left;">211</td>
+<td style="text-align: left;">212, 202</td>
+<td style="text-align: left;">212</td>
+<td style="text-align: left;">211, 201</td>
+</tr>
+</tbody>
+</table>
+<p><em>TT = Teaching Team</em></p>
+<h2 id="prior-to-the-design-review">Prior to the Design Review</h2>
+<p>Prepare the following deliverables prior to your presentation day:</p>
+<h3 id="prior-to-the-design-review-prepare-presentation">Prior to the Design Review: Prepare Presentation</h3>
+<ol>
+<li>
+<p>Create a 12-minute (max) <strong>Google Slides</strong> presentation with the following sections and store it in a team folder titled "<code>11-checkpoint-2</code>".  </p>
+<blockquote>
+<p>You do not need to pre-record voice narration, as you will be delivering its contents live and in-person.</p>
+</blockquote>
+<ol>
+<li><strong>Project name, team #, team members, external design consultant, and class (15 sec):</strong> Include a hyperlink to your team's updated report (see below).</li>
+<li><strong>Figure of selected product concept (1 min):</strong> Provide a figure/rendering/animation of your product in its current form. Highlight features that satisfy user needs, with labels and arrows. You may update or re-work one of the images from design ideation, or start from scratch if you prefer.</li>
+<li><strong>Block Diagram of your product (2 min):</strong> Discuss each teammate's subsystem and how they connect to achieve project requirements.</li>
+<li><strong>Component Selection (1 - 2 min):</strong> Present only the selected components, not the alternatives.</li>
+<li><strong>Hardware Proposal (4 - 5 min):</strong>  This can be multiple slides or one slide, but make sure that text (e.g., part numbers) on the schematic is readable. Include a slide with your schematic, and also include a hyperlink to a PDF of your schematic so reviewers can zoom in on their computers.</li>
+<li><strong>Software Proposal (1 - 2 min)</strong></li>
+<li><strong>Questions for reviewers:</strong> Pre-plan questions to ask of your reviewers about your design. For example, ask questions about parts you are unsure about, think there could be a better way to solve a problem, or may not align with the user's needs.</li>
+<li>Questions from reviewers</li>
+<li>Thank you!</li>
+<li>Practice your presentation to ensure you can present (without questions) for 12 minutes. All team members must present during part of the design review.</li>
+<li>Set permissions on the <code>11-checkpoint-2</code> folder so that anyone with the link can view it. Then create a QR code to the shared link to the folder at the beginning of your design review, so that the reviewers can look at parts in more detail on their own.</li>
+<li>
+<p>Some images are too high-resolution for the presentation to permit zooming.  Therefore, add pdf versions of the following documents to the <code>11-checkpoint-2</code> folder so that guests can follow along and navigate through your documents at their own pace.</p>
+</li>
+<li>
+<p>pdf version of your schematic</p>
+</li>
+<li>pdf version of your software diagram</li>
+<li>pdf version of any other high-res vector images</li>
+</ol>
+</li>
+</ol>
+<h3 id="prior-to-the-design-review-update-project-report">Prior to the Design Review: Update Project Report</h3>
+<h4 id="formatting">Formatting</h4>
+<p>We will be grading for format consistency through the use of styles. Please follow the <a href="https://embedded-systems-design.github.io/report-formatting-instructions/">report formatting instructions</a> found on the embedded systems design website.</p>
+<h4 id="content">Content</h4>
+<p>The purpose of this report is to consolidate all your team's individual assignments into one complete and comprehensive report. Do not remove content from assignments, but if it negatively impacts the flow of the document, feel free to move content to an appendix. In that case, make sure you <strong>refer and link</strong> to the appendix from the body of the report.</p>
+<p><strong>Make sure to review your team's feedback on Project Checkpoint 1 and update your report to fix any issues identified.</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Assignment</strong></th>
+<th><strong>Updates Required</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title Page</td>
+<td>Project name, team number, team members, external designer name, submission date, university, class, professor, link to your team folder</td>
+</tr>
+<tr>
+<td>Front Matter</td>
+<td>Add a table of contents (TOC) &amp; table of figures.</td>
+</tr>
+<tr>
+<td></td>
+<td><em>Show only the first two heading levels in your TOC to minimize the space required for the TOC.</em></td>
+</tr>
+<tr>
+<td>Introduction</td>
+<td>Add an introduction.</td>
+</tr>
+<tr>
+<td></td>
+<td><em>Consider moving and updating the introduction from your product requirements document to the front of the report</em></td>
+</tr>
+<tr>
+<td>Team Organization</td>
+<td>Use formatting to highlight the mission statement and charter from the surrounding paragraphs so we can identify it easily.</td>
+</tr>
+<tr>
+<td>Stakeholder Interviews</td>
+<td>Make any updates requested during Project Checkpoint 1 grading.</td>
+</tr>
+<tr>
+<td></td>
+<td><em>Make sure you refer to the appendix in the body of the report, indicating there is more content elsewhere</em></td>
+</tr>
+<tr>
+<td>User Needs and Benchmarking</td>
+<td>Update to reflect any new knowledge you have gained in user needs, other competitive products, or changes in your project direction.</td>
+</tr>
+<tr>
+<td>Product Requirements</td>
+<td>Update the product requirements section of your report to match your team's current design. Eliminate aspects that no longer apply, and create new design aspects as needed to match the current direction you are working in. We will be looking for consistency with your block diagram, components selected, schematic, power budget, and software proposal.</td>
+</tr>
+<tr>
+<td>Design Ideation</td>
+<td>Update based on feedback received both from the initial submission and Checkpoint 1. No specific action items are required, but continue to add detail based on feedback received.</td>
+</tr>
+<tr>
+<td>Selected Design (new)</td>
+<td>Include a short summary of the decision-making process your team used to pick one of the team's design concepts. Did you further combine good ideas from your design ideation? Did you select the best? How was the decision made?</td>
+</tr>
+<tr>
+<td></td>
+<td>If the selected design deviates significantly from the design ideation section, please explain the process by which you updated it.</td>
+</tr>
+<tr>
+<td>Block Diagram (new)</td>
+<td>Update your block diagram as needed to reflect changes to your current design, making sure you address any feedback received, whether in person or in writing.</td>
+</tr>
+<tr>
+<td></td>
+<td>Explain your decision making process for how you developed this and explain how your block diagram meets your product requirements.</td>
+</tr>
+<tr>
+<td></td>
+<td><em>You do not need to include the verification table, it will be included in Checkpoint 3</em></td>
+</tr>
+<tr>
+<td>Component Selection (new)</td>
+<td>Update component selections based on decisions made since the initial submission. Take into account suggestions made by the teaching team and based on the evolution of your project.</td>
+</tr>
+<tr>
+<td></td>
+<td>Explain your decision making process for creating this section and discuss how your selected components meet your product requirements</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Power Budget: Create or update your team's power budget to reflect your current design</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>Explain how you used the power budget to estimate power needs and any conclusions you have come to</td>
+</tr>
+<tr>
+<td>Hardware Proposal (new)</td>
+<td>Include an <em>image</em> of the team's schematics as a figure in the report. you may use landscape mode on this page to better fit the format of the schematic.</td>
+</tr>
+<tr>
+<td></td>
+<td>Discuss how the functionality of this schematic satisfies user needs and product requirements though an in depth discussion of function.</td>
+</tr>
+<tr>
+<td></td>
+<td>Discuss your team's design and decision making process related to this section</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Include the team's bill of materials in the appendix</strong></td>
+</tr>
+<tr>
+<td>Software Proposal (new)</td>
+<td>Include an <em>image</em> of the team's UML activity and/or statechart diagrams as a figure in the report. you may use landscape mode on this page to better fit the format of the schematic if desired</td>
+</tr>
+<tr>
+<td></td>
+<td>Discuss how the functionality of this software diagram satisfies user needs and product requirements though an in depth discussion of function</td>
+</tr>
+<tr>
+<td></td>
+<td>Discuss your team's design and decision making process related to this section</td>
+</tr>
+</tbody>
+</table>
+<h2 id="during-the-design-review">During the Design Review</h2>
+<p>The design reviews will have the following format. See the full schedule for more detailed information.</p>
+<ol>
+<li>Presenting and reviewing teams will break out into their respective tables according to the schedule.</li>
+<li><strong>Presenting Teams</strong> should designate at least one note taker from their team and take turns presenting and answering questions. One team member should share their screen to show the design documents to reviewers, and also post the link to their Google Slides deck in the chat so that reviewers can look at the presentation at their own pace. All team members (regardless of whether they are in the same physical location or not) must present during part of the design review.</li>
+<li><strong>External reviewers</strong> will provide oral feedback in addition to completing a brief feedback form.</li>
+<li><strong>Reviewing team members</strong> will be responsible for giving detailed feedback to the presenting teams using the Student Reviewer Forms (in the resources section above). Each reviewing team member should complete a different form.</li>
+<li>At the end of the first time period (approximately 30 minutes), presenters will remain at their tables and reviewers will return to the main virtual room. This will be repeated again, with each team and external reviewer entering the next room to which they are assigned per the schedule.</li>
+<li>At the end of the review period we will close the session with thanks to the external reviewers and any common feedback. <em>(~5 minutes)</em></li>
+</ol>
+<h2 id="after-the-design-review">After the Design Review</h2>
+<h3 id="1-process-feedback">1. Process Feedback</h3>
+<p>Based on the notes your team took during the design review and any written feedback received, make a list of action items that your team needs to resolve.</p>
+<h3 id="2-update-design-and-project-report">2. Update Design and Project Report</h3>
+<p>Modify your original design documents to correct as many of the errors identified as you can prior to submitting your final design review documents. While it is not required that you address all of the issues prior to report submission, your product (and grade) will be higher if you are able to address all of them.</p>
+<h3 id="3-update-team-folder-structure">3. Update Team Folder Structure</h3>
+<h4 id="setup">Setup</h4>
+<p>Please refer to the <a href="/304/304-team-00-team-repository/">Team Repository assignment</a> for complete instructions on setting up your team folder.</p>
+<h4 id="content_1">Content</h4>
+<ol>
+<li>Add the following folders to your <em>assignments</em> folder:<ul>
+<li>06-checkpoint-1</li>
+<li>07-block-diagram</li>
+<li>08-component-selection</li>
+<li>09-software-proposal</li>
+<li>10-hardware-proposal</li>
+<li>11-checkpoint-2</li>
+</ul>
+</li>
+<li>
+<p>Add all contents to each folder, including...</p>
+<ul>
+<li>01-team-organization<ul>
+<li>Team Organization &amp; Charter assignment document</li>
+</ul>
+</li>
+<li>02-interviews<ul>
+<li>Stakeholder interview protocol</li>
+<li>Stakeholder interview raw notes</li>
+<li>Stakeholder interview insights document</li>
+</ul>
+</li>
+<li>03-user-needs<ul>
+<li>User needs assignment document</li>
+<li>images/whiteboards/slides from generation process</li>
+</ul>
+</li>
+<li>04-product-requirements-document<ul>
+<li>Product requirements assignment document</li>
+</ul>
+</li>
+<li>05-design-ideation<ul>
+<li>Design ideation assignment document</li>
+<li>images/whiteboards/slides from generation process</li>
+<li>Vector-based source files for each design concept</li>
+</ul>
+</li>
+<li>06-checkpoint-1 (formerly called presentations)<ul>
+<li>checkpoint 1 presentation</li>
+<li>pdf copy of the original version of your report</li>
+</ul>
+</li>
+<li>07-block-diagram<ul>
+<li>Block diagram assignment document</li>
+<li>Source file for block diagram</li>
+<li>Verification table spreadsheet (XLSX)</li>
+</ul>
+</li>
+<li>08-component-selection<ul>
+<li>Component selection assignment document</li>
+<li>Power budget spreadsheet (XLSX)</li>
+</ul>
+</li>
+<li>09-software-proposal<ul>
+<li>Software proposal assignment document</li>
+<li>UML activity and/or statechart diagrams</li>
+</ul>
+</li>
+<li>10-hardware-proposal<ul>
+<li>Hardware proposal assignment document</li>
+<li>PDFs of schematics submitted for this assignment</li>
+<li>ZIP of the KiCad or Cadence project submitted for this assignment</li>
+<li>Bill of materials spreadsheet (XLSX)</li>
+<li>Data sheets for all selected electronic components in a subfolder</li>
+</ul>
+</li>
+<li>11-checkpoint-2<ul>
+<li>pdf version of your schematic, as presented during design review</li>
+<li>pdf version of your software diagram, as presented during design review</li>
+<li>pdf version of any other high-res vector images, as presented during design review</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Add checkpoint 1 and checkpoint 2 presentation files to their respective presentations folders, using the naming convention from <a href="/304/304-team-06-checkpoint-1/">Checkpoint 1</a></p>
+</li>
+<li>Add any images, videos, CAD, or code you have generated to their respective folders, according to the naming convention from <a href="/304/304-team-06-checkpoint-1/">Checkpoint 1</a><ul>
+<li>ecad - You should start saving ZIP snapshots of your team's PCB design as it evolves.</li>
+</ul>
+</li>
+<li>Move any unsorted floating files to their proper folder.</li>
+</ol>
+<h2 id="submission">Submission</h2>
+<h3 id="canvas">Canvas</h3>
+<h4 id="google-drive-folder">Google Drive Folder</h4>
+<p>Unless you have changed folders or did not share your folder according to the instructions in Checkpoint 1, you do not need to re-share with the teaching team.</p>
+<h4 id="report">Report</h4>
+<p>Combine the above report sections into a single PDF (required for grading) named <code>team-123-report.pdf</code> where <code>123</code> is your team number and submit to Canvas by the deadline in the course calendar. <em>Do not just submit a link to your folder.</em> No credit will be awarded for assignments not submitted to Canvas.</p>
+<h4 id="presentation-file">Presentation File</h4>
+<p>Submit a .pptx or .pdf version of your presentation to Canvas. Please refrain from embedding videos for space reasons. Any linked videos must link to a YouTube video rather than Google Drive (to prevent permission errors).</p>
+<h2 id="grading">Grading</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th style="text-align: right;"><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Drive folder structure</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td><em>(each mistake -5 points)</em></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Live Presentation</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr>
+<td><em>You will not get credit for the presentation portion of this assignment if you are not present during your Checkpoint day.</em></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Live Presentation Reviews</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td><em>You will not get credit for the presentation portion of this assignment if you do not review on the Checkpoint day you are not presenting.</em></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Presentation File(in <code>11-checkpoint-2</code>)</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td>Report</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>* selected design</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td>* block diagram</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr>
+<td>* component selection</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr>
+<td>* software proposal</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr>
+<td>* hardware proposal</td>
+<td style="text-align: right;">150</td>
+</tr>
+<tr>
+<td>* General formatting, layout, organization, and legibility</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td>* Feedback-based updates applied to all sections</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>1050</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2024 Dan Aukes and Shawn Jordan
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

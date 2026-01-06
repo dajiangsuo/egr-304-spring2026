@@ -1,0 +1,1288 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+            
+
+        
+
+    
+      
+        <title>304 HW2 -- PSoC General-Purpose Input-Output (GPIO) - EGR304-S-2025 Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objectives" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-header__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EGR304-S-2025 Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              304 HW2 -- PSoC General-Purpose Input-Output (GPIO)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  304
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-nav__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    EGR304-S-2025 Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    304
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    304
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    project description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3X4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3X4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    course sequence requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    submission best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parts-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parts Needed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-to-demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prior to Demonstration of Proficiency
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prior to Demonstration of Proficiency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#10-getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.0 Getting Started
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-onboard-button-leds-and-morse-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.0 Onboard Button, LEDs, and Morse Code
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#30-custom-psoc-symbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.0 Custom PSoC Symbol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individual Demonstration of Proficiency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canvas-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas Submission
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Canvas Submission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#psoc-creator-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PSoC Creator Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schematic-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schematic Files
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grading
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frequently Asked Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source/edit/main/docs/304/304-ind-02-psoc-in-depth/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>304 HW2 -- PSoC General-Purpose Input-Output (GPIO)</h1>
+
+<blockquote>
+<p><strong>This is an individual homework assignment</strong> but you may work with others to determine how to complete the assignment.  All work demonstrated in checkoff must be completed by you on your own board.</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>To individually demonstrate proficiency in installing and running the Cypress PSoC Integrated Development Environment (IDE) tools to program sample code onto a microcontroller, and to modify that code and surrounding hardware to add additional functionality.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Scherz, P., &amp; Monk, S. (2016). <a href="https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1470699914&amp;sr=1-1&amp;keywords=practical+electronics+for+inventors+4th+edition">Practical electronics for inventors, fourth edition.</a> New York: McGraw Hill. ISBN: 978-1259587542</li>
+<li><a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/">CY8CKIT-042</a> <a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/">evaluation board</a> <a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/">main page</a>, which includes the Prototyping Kit Guide, Schematic, and Example Code Installer</li>
+<li><a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/">CY8CKIT-042-BLE evaluation board main page</a>, which includes the Prototyping Kit Guide, Schematic, and Example Code Installer</li>
+<li><a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-142/">CY8CKIT-142 BLE module main page</a> (<a href="https://www.digikey.com/en/products/detail/cypress-semiconductor-corp/CY8CKIT-142/5225792">digikey</a>)(<a href="https://www.infineon.com/dgdl/Infineon-CY8CKIT-142_PSoC_4_BLE_Module-UserManual-v01_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0ef062300159">datasheet</a>)</li>
+<li><a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-143a/">CY8CKIT-143A BLE module main page</a> (<a href="https://www.digikey.com/en/products/detail/cypress-semiconductor-corp/CY8CKIT-143A/5825476?utm_adgroup=Battery%20Products&amp;utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=Dynamic%20Search_EN_Product&amp;utm_term=&amp;utm_content=Battery%20Products&amp;gclid=CjwKCAjw9NeXBhAMEiwAbaY4lhyxt3pAzZqZrBieuURHvkGQ64wU6wWFvsmv4xKdSnfoEH9P3tj8hBoCccQQAvD_BwE">digikey</a>) (<a href="https://www.infineon.com/dgdl/Infineon-Quick_Start_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0efc0f08120a&amp;utm_source=cypress&amp;utm_medium=referral&amp;utm_campaign=202110_globe_en_all_integration-files">datasheet</a>)</li>
+<li><a href="https://www.dropbox.com/sh/iwzj4pjj6iwzwon/AABn9jsjRaj-Rx9nui4SWdnca?dl=0">PSoC workshop slides, labs, and templates</a></li>
+<li><a href="https://youtu.be/CVt31tGO92E">Presentation from Dr. Patrick Kane</a> <em>(Infineon)</em></li>
+<li>The Embedded Systems Design website<ul>
+<li><a href="https://embedded-systems-design.github.io/kicad/kicad-schematic-design/">KiCad<span class="arithmatex">\(^1\)</span></a> schematic posts:<ul>
+<li><a href="https://embedded-systems-design.github.io/kicad-symbol-creation/">Symbol Creation</a></li>
+<li><a href="https://embedded-systems-design.github.io/kicad-schematic-capture/">Schematic Capture</a></li>
+<li><a href="https://embedded-systems-design.github.io/kicad-common-pin-types/">Common Pin Types and their Meanings</a></li>
+</ul>
+</li>
+<li><a href="https://embedded-systems-design.github.io/cadence/">Cadence</a> posts<ul>
+<li><a href="https://embedded-systems-design.github.io/creating-a-custom-library-in-cadence/">Creating a custom library in Cadence</a></li>
+<li><a href="https://embedded-systems-design.github.io/creating-a-custom-schematic-symbol-in-cadence/">Creating a custom schematic symbol in Cadence</a></li>
+<li><a href="https://embedded-systems-design.github.io/creating-a-new-project-in-cadence/">Creating a new project in Cadence</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>KiCad<span class="arithmatex">\(^1\)</span> <a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html">Getting Started</a> Pages on the KiCad<span class="arithmatex">\(^1\)</span> website:<ul>
+<li>Introduction to KiCad<span class="arithmatex">\(^1\)</span>: <a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#download-and-install-kicad">Download and Install</a></li>
+<li><a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#basic_concepts_and_workflow">Basic Concepts and Workflow</a></li>
+<li><a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#tutorial_part_1_project">Tutorial 1: Project</a></li>
+<li><a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#tutorial_part_2_schematic">Tutorial 2: Schematic</a></li>
+</ul>
+</li>
+<li>Canvas discussion board</li>
+</ul>
+<h2 id="parts-needed">Parts Needed</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Detail</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CY8CKIT-042 <em>or</em> CY8CKIT-042-BLE PSoC</td>
+<td>1</td>
+<td>supplied in class 8/29</td>
+</tr>
+<tr>
+<td>USB mini B cable</td>
+<td>1</td>
+<td>included in PSoC kit</td>
+</tr>
+<tr>
+<td>LEDs (optional)</td>
+<td>2</td>
+<td>(found in your kit)</td>
+</tr>
+<tr>
+<td>Pushbuttons</td>
+<td>2</td>
+<td>(found in your kit)</td>
+</tr>
+<tr>
+<td>1/4 Watt Resistors (optional)</td>
+<td>various</td>
+<td>Appropriate for limiting current through the LED (you will use both onboard and offboard LEDs for different parts of the assignment).(found in your kit)</td>
+</tr>
+<tr>
+<td>Breadboard</td>
+<td>1</td>
+<td>(found in your kit)</td>
+</tr>
+<tr>
+<td>Jumper Wires</td>
+<td>multiple</td>
+<td>(found in your kit)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prior-to-demonstration-of-proficiency">Prior to Demonstration of Proficiency</h2>
+<p><em>Complete all of the steps below prior to the demonstration of proficiency.</em></p>
+<h3 id="10-getting-started">1.0 Getting Started</h3>
+<p>In this assignment, you may use either the CY8CKIT-042 or CY8CKIT-042-BLE evaluation boards. It is recommended that you lay out the large components prior to wiring to ensure sufficient space on your breadboard.</p>
+<ol>
+<li>Complete <a href="/304/304-icc-02-hello-world-psoc/">ICC2 - Hello, World! (PSoC)</a>.</li>
+</ol>
+<h3 id="20-onboard-button-leds-and-morse-code">2.0 Onboard Button, LEDs, and Morse Code</h3>
+<ol>
+<li>
+<p>Study the following critical information and concepts:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Critical Information and Concepts</strong></th>
+<th><strong>Importance</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a.  Which ports on the PSoC the <em>onboard</em> LEDs and button are connected to.</td>
+<td>Needed in order to control LEDs and read the button in software. Can be found in the Appendix of the Prototyping Kit Guide, or noted on the PSoC board itself.</td>
+</tr>
+<tr>
+<td>b.  What International Morse Code is and how it was used.</td>
+<td>Needed to understand the format and purpose of Morse Code. Summary can be found on <a href="https://en.wikipedia.org/wiki/Morse_code">Wikipedia</a>.</td>
+</tr>
+<tr>
+<td>c.  How to represent your initials in Morse code.</td>
+<td>Needed in order to program an LED to display your initials in Morse Code. Can be found in this <a href="http://students.cs.ucl.ac.uk/schoolslab/projects/PY2/introduction.html">Introduction on Morse Code</a>.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Connect the CY8CKIT-042 to your computer via USB</p>
+</li>
+<li>In PSoC Creator, create a new project for the CY8CKIT-042 (or CY8CKIT-042-BLE) and save it in a new workspace for Homework 2.</li>
+<li>Create two (2) Digital Output pins and one (1) Digital Input pin in the Top Design.<ol>
+<li>In the configuration pane, disable the hardware connection for each pin and set "Drive mode" to "Resistive pull up".</li>
+<li>In the Design Wide Resources &gt; Pins window, connect the output pins to two different ports that map to LEDs onboard the CY8CKIT-042 (or CY8CKIT-042-BLE).</li>
+<li>In the Design Wide Resources &gt; Pins window, connect the input pin to the port that maps to the user switch onboard the PSoC board.</li>
+</ol>
+</li>
+<li>Using a <a href="https://morsecode.world/international/translator.html">Morse Code Translator</a>, determine the pattern needed to send your initials (e.g., Dr.Jordan's are SJ) in Morse Code.</li>
+<li>
+<p>Open <code>main.c</code> and add code to the <code>for(;;)</code> loop that does the following:</p>
+<ol>
+<li>Turns the first LED on for 1 second, and then off for 1 second. The first LED should then remain off for steps b - d.</li>
+<li>
+<p>Waits indefinitely for the button to be pressed (<strong>not held</strong>).</p>
+<blockquote>
+<p><em>Hint:</em> In the Top Design, right-click on one of the I/O pins and choose "Open Datasheet..." and scroll to the Application Programming Interface section to learn about the code used to read from an input pin. Then, use the code with a <code>while()</code> loop to wait for the button press.</p>
+</blockquote>
+</li>
+<li>
+<p>Turns the second LED on and off as needed to display your initials (first and last) in Morse Code. A "dot" should be 500 ms (so per the <a href="http://students.cs.ucl.ac.uk/schoolslab/projects/PY2/introduction.html">rules of Morse Code</a>, a "dot" would be represented with an LED being on for 500 ms and off for another 500 ms.</p>
+</li>
+<li>Waits for 5 seconds before repeating steps a - d.&nbsp;This sequence should repeat as long as the microcontroller is powered.</li>
+</ol>
+</li>
+</ol>
+<h2 id="30-custom-psoc-symbol">3.0 Custom PSoC Symbol</h2>
+<ol>
+<li>
+<p>Create a schematic for the CY8CKIT-143A BLE Module (Same footprint and pinout as the CY8CKIT-142). Following the resources for KiCad<span class="arithmatex">\(^1\)</span> or Cadence above,</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image3.jpg" data-desc-position="bottom"><img alt="Figure: CY8CKIT-143A BLE Module" src="image3.jpg" style="max-height:200px;"></a></p>
+<ol>
+<li>Create your own custom symbol for the CY8CKIT-143A BLE Module, including all connections for the 2x10 and 2x12 female headers found on the board. (Your board should include male headers.) <strong>Do not create a symbol for the raw CY8C4248LQI-BL583 IC, you will be using the CY8CKIT-143A BLE module</strong><ul>
+<li>The symbol should include your initials in the symbol name <em>so that your </em><em>initials are visible</em><em> when the symbol is added to schematics.</em></li>
+<li>Pin Names should be identical to the names found in the CY8CKIT-143A manual</li>
+<li>Pin type should be accurately specified in the symbol definition.<br><em>KiCad<span class="arithmatex">\(^1\)</span>:</em> See <a href="https://embedded-systems-design.github.io/kicad-common-pin-types/">Common Pin Types and their Meanings</a></li>
+<li>Specific pin numbering is not given in the datasheet. Number your pins in a consistent and orderly manner.</li>
+<li>Save your new symbol into a copy of the custom library you created in HW1. Make sure you add that library to your HW2 project and update the project to have a project symbol table. This can be done in the symbol editor by selecting the library, clicking "Save As..." and saving it to your HW2 project folder. Make sure to "Add new project symbol table" in the process.</li>
+<li>None of the other (non-header) pins should be added.</li>
+</ul>
+</li>
+<li>Add the BLE module to a schematic.</li>
+<li>
+<p>Add all necessary components for minimum viable circuit. This includes:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image2.jpg" data-desc-position="bottom"><img alt="Figure" src="image2.jpg" style="max-height:200px;"></a></p>
+<ul>
+<li>A power connector (e.g., a through-hole barrel jack) so you can connect an external power supply to the board.</li>
+<li>0.1 µF <a href="https://embedded-systems-design.github.io/bypass-capacitor-basics/">bypass capacitors</a> on <strong>every</strong> power pin connecting to the processor module (unless otherwise specified in the datasheet).</li>
+<li>HEADERx pins (where x is determined by the number of pins required to select the right header length) to connect parts of your teammates' circuits to your microcontroller</li>
+<li>At least one debugging LED (through-hole or surface mount) with a current-limiting resistor (surface mount) attached to an unused microcontroller I/O pin.</li>
+<li>At least one <a href="https://embedded-systems-design.github.io/pull-down-resistors/">pushbutton with a pull-up resistor</a> (through-hole button, surface mount resistor) for debugging.</li>
+</ul>
+<blockquote>
+<p><em>KiCad<span class="arithmatex">\(^1\)</span>:</em> Wherever possible, use the "US" version of parts, including "R_US" instead of "R", "C_US" instead of "C", and "C_Polarized_US" instead of "C_Polarized", etc.</p>
+</blockquote>
+</li>
+<li>
+<p>Review this <a href="https://embedded-systems-design.github.io/schematic-checklist/">short schematic checklist</a> to ensure your design isn't missing any common mistakes</p>
+</li>
+<li>Export your schematic to PDF and package your files for submission to Canvas</li>
+</ol>
+<blockquote>
+<p><em>KiCad<span class="arithmatex">\(^1\)</span>:</em> Follow the instructions for <a href="https://embedded-systems-design.github.io/packaging-kicad-files-for-submission/">Packaging KiCad<span class="arithmatex">\(^1\)</span> Files for Submission</a></p>
+<p><em>Cadence:</em>Follow the instructions for <a href="https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/">Packaging Cadence Files for Submission</a></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="individual-demonstration-of-proficiency">Individual Demonstration of Proficiency</h2>
+<p>You must complete a live demonstration individually, either in office hours or in class if time permits. Demonstrations can be done up to the last office hours on the due date noted in Canvas.  <strong>No late demonstrations will be accepted</strong></p>
+<ol>
+<li>Compile, download, and demonstrate your solution to Part 2.0 above, where the code should turn on and off an onboard LED, wait for the onboard button to be pressed, and then flash your initials in Morse code. Confirm the pattern using a <a href="https://morsecode.world/international/translator.html">Morse Code Translator</a>.</li>
+</ol>
+<h2 id="canvas-submission">Canvas Submission</h2>
+<p>Submit the items below to Canvas by the deadline given (in Canvas). <strong>Do not submit screenshots.</strong> <em>Do not submit links to Google documents.</em> It is your responsibility to ensure that your submission to Canvas was successful. Late Canvas submissions will be graded per the policy in the syllabus. No credit will be awarded for assignments not submitted via Canvas.</p>
+<h3 id="psoc-creator-files">PSoC Creator Files</h3>
+<p>Submit your packaged PSoC Creator workspace (right-click on the Workspace, select "Archive Workspace/Project..." from the contextual menu, and select a Minimal archive) in ZIP format to this assignment on <a href="http://canvas.asu.edu">Canvas</a> by the deadline in Canvas. Do not submit links to Google documents.</p>
+<h3 id="schematic-files">Schematic Files</h3>
+<p>Follow the instructions for packaging your schematic (<a href="https://embedded-systems-design.github.io/packaging-kicad-files-for-submission/">KiCad<span class="arithmatex">\(^1\)</span></a>)(<a href="https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/">Cadence</a>) to create a PDF and ZIP archive (including all library files) for your project. Submit <strong>both</strong> the PDF and ZIP archive as separate documents to this assignment on <a href="https://canvas.asu.edu">Canvas</a> by the deadline in Canvas.</p>
+<h2 id="grading">Grading</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Demonstration Item</strong></th>
+<th><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Onboard button + morse code LED</td>
+<td>150</td>
+</tr>
+<tr>
+<td style="text-align: left;">PSoC Creator Archive of Workspace</td>
+<td>25</td>
+</tr>
+<tr>
+<td style="text-align: left;">Updated KiCAD<span class="arithmatex">\(^1\)</span> / Cadence custom library included in KiCad<span class="arithmatex">\(^1\)</span> / Cadence Project ZIP file</td>
+<td>25</td>
+</tr>
+<tr>
+<td style="text-align: left;">Custom PSoC symbol added to custom library</td>
+<td>75</td>
+</tr>
+<tr>
+<td style="text-align: left;">Legible PDF of schematic included in submission</td>
+<td>25</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td><strong>300</strong></td>
+</tr>
+</tbody>
+</table>
+<p>You must submit to Canvas <strong>and</strong> demonstrate your solution in order to receive credit. Late submissions and demonstrations will be graded per the policy in the syllabus, based on the last activity (Canvas submission or demonstration).</p>
+<hr>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>I can't find my workspace/project in PSoC Creator</strong></p>
+<ul>
+<li>C files, top design files, etc. are saved in project files</li>
+<li>Project files are saved in workspaces</li>
+<li>Workspaces are saved in the folder "PSoC Creator"</li>
+<li>The PSoC Creator folder can be found in the Documents folder of the user account</li>
+<li>Click <code>*.cywrk</code> to open a workspace</li>
+<li>Click <code>*.cyprj</code> to open a project</li>
+</ul>
+<p><strong>How do I read an API?</strong></p>
+<ul>
+<li><code>`void functionName(string descriptiveName)</code><ul>
+<li><code>void</code> = return value, it can be nothing (<code>void</code>) in which case it cannot be set or assigned to a variable, otherwise it will have a datatype such as <code>uint8</code>, which can be stored in a variable of the same type</li>
+<li><code>functionName</code> = the name of the function, in pin and PWM read/writes, the first part (<code>Pin_*</code> or <code>TCPWM_*</code>) must be the name of the pin as defined in the top design (e.g.&nbsp;<code>PIN_1</code> -&gt; <code>PIN_1_Read()</code>)</li>
+<li><code>string</code> = expected datatype of the parameter (the value passed into the function), other datatypes but not an extensive list: <code>int</code>, <code>uint8</code>, <code>uint16</code>, <code>`uint32</code></li>
+<li><code>descriptiveName</code> = a variable name describing what the expected value(s) are (e.g.&nbsp;<code>*_Write</code> has the parameter <code>uint8</code> value and the function call might be <code>PIN_1_Write(50)</code>)</li>
+</ul>
+</li>
+</ul>
+<p><strong>What is a <code>uint8</code>?</strong></p>
+<ul>
+<li><code>u</code> = unsigned (only positive numbers)</li>
+<li><code>int</code> = integer (only whole numbers)</li>
+<li><code>8</code> = number of bits (8 bits =  0 - 2<sup>8</sup>-1)</li>
+</ul>
+<p><strong>Is there an auto-formatter in PSoC Creator?</strong></p>
+<ul>
+<li>No, you must format your own code</li>
+</ul>
+<p><strong>PSoC Creator can't find my device</strong></p>
+<ul>
+<li>Unplug the device and plug it back in</li>
+<li>Restart PSoC Creator</li>
+<li>Restart computer</li>
+<li>Try a different USB cable. (The cable that came with your kit is a special USB power + data cable. Many phone charger cables only provide power).</li>
+<li>Try a different computer</li>
+</ul>
+<p><strong>Debug Target does not match/is not compatible with project's selected device</strong></p>
+<ul>
+<li>Unplug the board</li>
+<li>Find the onboard toggle switch and flip it (it should not be on BLE)</li>
+<li>Plug the board back in to see if it is resolved</li>
+<li>In PSoC Creator, right-click on the project in the workspace explorer and choose "Device Selector". Make sure CY8C4147AZI-S475 is selected. (Or, rebuild your project from scratch making sure to choose the correct device at the beginning).</li>
+</ul>
+<p><strong>I'm missing a window in PSoC Creator/I accidentally closed a pane I needed!</strong></p>
+<ul>
+<li>In PSoC Creator, go to the Window menu and select "Reset Layout"</li>
+</ul>
+<p><strong>PSoC Creator is building the wrong project!</strong></p>
+<ul>
+<li>Set your current workspace to default</li>
+<li>Set the active project to the project that needs to be built (right click on the project in the workspace window)</li>
+</ul>
+<p><strong>Symptoms / Remedies</strong></p>
+<p><em>Debugging is a process of systematically double-checking your assumptions, because if everything was correct then it would be working. See below for some common symptoms and possible debugging remedies.</em></p>
+<p><em>My PSoC port isn't working</em></p>
+<ul>
+<li>Try a different port</li>
+<li>Check that the pin is set up correctly according to the assignment instructions</li>
+<li>The above is correct but still not working? Check the continuity of the pins to ensure the soldering quality is not causing the problem</li>
+</ul>
+<p><em>My program won't build (Code errors)</em></p>
+<ul>
+<li>Does every open curly bracket (<code>{``) have a closing partner (</code>}``)?</li>
+<li>Does every statement (not condition or loop) have a semi-colon (<code>`;</code>)?</li>
+<li>Were the functions called correctly?</li>
+<li>Are the loops/conditional statements written correctly?</li>
+<li>Read the error logs from the earliest error.</li>
+<li>Use the line numbers in the error logs to find out where, and the message to tell what the error might be (missing <code>;``,</code>{<code>, ```}</code>, incorrect function name (<code>PIN_NAME_functionname()</code>), missing parenthesis around the if condition, missing parenthesis to signify a function, etc.)</li>
+</ul>
+<p><em>My program won't build (Top Design/Pin setup errors)</em></p>
+<ul>
+<li>Are the pins and other components set up as instructed by the assignment?</li>
+<li>Check the connection(s) of components and the PWM module</li>
+<li>Check that the port/pin is able to do PWM through the pin/port setup dropdown</li>
+</ul>
+<p><em>My onboard LED/Button isn't working</em></p>
+<ul>
+<li>Choose a different LED/button</li>
+<li>Ensure components were set up in PSoC Creator as instructed by the assignment</li>
+<li>Did you try the onboard LEDs or the LEDs near the CapSense pads? Either should work</li>
+<li>Test the pieces individually/one at a time (i.e.&nbsp;just the LED blinking, then turn on the LED when the button is pushed/held, etc.) before combining them</li>
+</ul>
+<p><em>My external LED/Button isn't working</em></p>
+<ul>
+<li>Is there power?</li>
+<li>Is the circuit complete?</li>
+<li>Are the pins set up correctly in PSoC Creator?</li>
+<li>Are the anode/cathode of the LED in the correct orientation? (Current flows in the direction of the arrow in an LED).</li>
+<li>Check that there isn't a short in the circuit</li>
+<li>Check the resistor(s) being used are the correct ones</li>
+<li>Use a different external LED</li>
+<li>Use a different external button</li>
+<li>Is a wire broken?</li>
+<li>Try making the onboard LED work with the external button</li>
+<li>Try making the external LED work without the external button</li>
+<li>Try making the button work on its own using an onboard LED</li>
+<li>If none of the above resolve the issue, create a new PSoC project from scratch and redo the part</li>
+</ul>
+<p><em>My code doesn't work as it should</em></p>
+<ul>
+<li>Confirm line by line what makes sense/is supposed to be there</li>
+<li>Swap/flip values (trial by experimentation)</li>
+<li>Try isolating pieces of the code to debug it a little bit at a time (i.e.&nbsp;just the LED flip, then just the dot of the morse code, etc.)</li>
+<li>Read the code aloud to someone even if they don't understand to find tiny human mistakes (see also: rubber ducking)</li>
+<li>Chances are the code does exactly what you tell it. So maybe you're not telling it what to do in the right order, otherwise, check your wiring for external components</li>
+</ul>
+<p><em>My LED on/off values are inverted?</em></p>
+<ul>
+<li>Make sure your LEDs are set up correctly in PSoC Creator</li>
+</ul>
+<p><em>Nothing works/I've tried everything here</em></p>
+<ul>
+<li>Try starting a new project and redo everything (carefully)</li>
+</ul>
+<p><strong>Checklist</strong></p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Soldering</td>
+<td>Is it a good solder joint? (no bubble/balls of solder, solder isn't touching anything but the pin and the pad, can't see through the other side of the pinhole, nothing is loose/wiggling, solder joints are shiny rather than dull)</td>
+</tr>
+<tr>
+<td></td>
+<td>Do all pins have continuity? (test with multimeter)</td>
+</tr>
+<tr>
+<td>Coding</td>
+<td>Is the code readable/well formatted? (makes debugging easier)</td>
+</tr>
+<tr>
+<td></td>
+<td>Do you know what every line of code does? Does every line of code make sense? (makes understanding behavior easier)</td>
+</tr>
+<tr>
+<td></td>
+<td>Does every line function as it is intended? (avoid unexplainable behavior)</td>
+</tr>
+<tr>
+<td></td>
+<td>Do the variables have datatypes (make like match with like to avoid warnings and errors)</td>
+</tr>
+<tr>
+<td></td>
+<td>Do the loops have entry/break conditions (excluding <code>for;;</code>) (have conscious and complete control of loops)</td>
+</tr>
+<tr>
+<td></td>
+<td>Use read functions as intended: read, check, or save values</td>
+</tr>
+<tr>
+<td></td>
+<td>Use write functions as intended: write values to pins</td>
+</tr>
+<tr>
+<td>Circuit</td>
+<td>Do all components function independently (to ensure no broken/dead pieces)</td>
+</tr>
+<tr>
+<td></td>
+<td>Are there any shorts?</td>
+</tr>
+<tr>
+<td>PSoC</td>
+<td>Configured pin names match names used in code?</td>
+</tr>
+<tr>
+<td></td>
+<td>Using pins that can provide the intended functionality?</td>
+</tr>
+<tr>
+<td></td>
+<td>Everything is connected where it should be (line to pin, clock to PWM)</td>
+</tr>
+</tbody>
+</table>
+<p><span class="arithmatex">\(^1\)</span> KiCad is only permitted in EGR304</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2024 Dan Aukes and Shawn Jordan
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

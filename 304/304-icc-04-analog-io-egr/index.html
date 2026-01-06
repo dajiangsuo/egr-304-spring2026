@@ -1,0 +1,1164 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+            
+
+        
+
+    
+      
+        <title>304 ICC4 -- Analog I/O and UART (PSoC) - EGR304-S-2025 Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objectives" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-header__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EGR304-S-2025 Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              304 ICC4 -- Analog I/O and UART (PSoC)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  304
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-nav__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    EGR304-S-2025 Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    304
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    304
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    project description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3X4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3X4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    course sequence requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    submission best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parts-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parts Needed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-to-demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prior to Demonstration of Proficiency
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prior to Demonstration of Proficiency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-psoc-project-and-top-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a new PSoC project and top design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-code-to-output-your-initials-to-putty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing code to output your initials to PuTTY
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-an-analog-value-and-outputting-it-to-putty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reading an analog value and outputting it to PuTTY
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individual Demonstration of Proficiency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canvas-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas Submission
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rubric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Devices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source/edit/main/docs/304/304-icc-04-analog-io-egr/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>304 ICC4 -- Analog I/O and UART (PSoC)</h1>
+
+<blockquote>
+<p>This assignment is a <strong><em>paired in-class checkoff</em></strong>. An <strong>individual</strong> live demonstration is required. You may work in pairs (<strong>one</strong> partner), but must individually demonstrate your working breadboard.</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>Many sensors have an analog output that must be digitized using an Analog to Digital Converter (ADC) in order to use them in a microcontroller. The PSoC's ADC subsystem is the peripheral used to read analog values and convert it into a digital number for use in your program. It can be configured in a variety of ways. In this assignment, you will create an ADC component and program your microcontroller to transmit the result of reading an analog voltage measured at an input pin, using the ADC component in one of its simplest configurations.</p>
+<blockquote>
+<p>This in-class checkoff requires advance work in order to complete it within one class period. Please read through the ICC, read all datasheets, and prepare your circuits as much as possible.</p>
+</blockquote>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://urldefense.com/v3/__https://www.youtube.com/watch?v=sWcAb_V-L3A__;!!IKRxdwAv5BmarQ!Y9G6h1U3pjUXWgyaRoH6UfeASxcu3k2RkcN1GX9E2Jo2CZ_2LvmtEqfcPTCDOcSy4R8zEeaTKi-DJ4nE7I-RAaiA_yo$">Video Walkthrough</a></li>
+<li>Scherz, P., &amp; Monk, S. (2016). <a href="https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1470699914&amp;sr=1-1&amp;keywords=practical+electronics+for+inventors+4th+edition">Practical electronics for inventors, fourth edition.</a> New York: McGraw Hill. ISBN: 978-1259587542<ul>
+<li>Analog input - Scherz &amp; Monk, Section 13.5.2</li>
+</ul>
+</li>
+<li><a href="https://www.cypress.com/file/396611/download">PSoC 4100S Plus Datasheet</a></li>
+<li><a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/">CY8CKIT-042 evaluation board main page</a>, which includes the Prototyping Kit Guide, Schematic, and Example Code Installer</li>
+<li><a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/">CY8CKIT-042-BLE evaluation board main page</a>, which includes the Prototyping Kit Guide, Schematic, and Example Code Installer</li>
+<li><a href="https://www.dropbox.com/s/uch6vnjg1pdluot/PSoC%204%20Lab%204%20-%20ADC%20-%20Lab%20Manual.pdf?dl=0">PSoC 4 Lab 4 - ADC - Lab Manual.pdf</a>, which follows similar steps to those in this ICC.</li>
+<li>PuTTY <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">website</a></li>
+<li>Canvas discussion board</li>
+<li>C Information<ul>
+<li><a href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html">GNU C Reference Manual</a></li>
+</ul>
+</li>
+<li>Wikipedia articles on <a href="https://en.wikipedia.org/wiki/RS-232">RS-232</a>, and <a href="https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter">UART</a></li>
+<li><a href="https://www.youtube.com/watch?v=vezklzw6PxM">Video Tutorial on USB Serial</a></li>
+<li>The <a href="https://embedded-systems-design.github.io">Embedded Systems Design</a> website</li>
+</ul>
+<h2 id="parts-needed">Parts Needed</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Item</strong></th>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: left;"><strong>Detail</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Voltage regulator circuit from HW1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">See HW1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Breadboard</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Jumper wires</td>
+<td style="text-align: left;">many</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">CY8CKIT-042 (or CY8CKIT-042-BLE) PSoC 4 Prototyping Kit</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">USB mini B cable</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">included in PSoC kit</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resistors</td>
+<td style="text-align: left;">multiple</td>
+<td style="text-align: left;">various</td>
+</tr>
+<tr>
+<td style="text-align: left;">10 k<span class="arithmatex">\(\Omega\)</span> Potentiometer</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">from kit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prior-to-demonstration-of-proficiency">Prior to Demonstration of Proficiency</h2>
+<p><em>Complete all of the steps below prior to the demonstration of proficiency.</em></p>
+<ol>
+<li>
+<p>Study the following critical information and concepts:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Critical Information and Concepts</strong></th>
+<th style="text-align: left;"><strong>Importance</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">a. What is the syntax for a <code>do-while</code> loop in C, and when is it useful?</td>
+<td style="text-align: left;">You will be using a <code>do-while</code> loop to ensure that at least one character is read before jumping out of the loop. See <a href="https://www.tutorialspoint.com/cprogramming/c_do_while_loop.htm">do...while loop in C from tutorialspoint.com</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">b. What is an ASCII character and how do I reference one in C?</td>
+<td style="text-align: left;">ASCII is a way that computers store characters, and you will be reading and converting ASCII characters in this section. Learn more about ASCII conversions at <a href="https://www.asciitable.com">asciitable.com</a>. For example in C, you can represent the letter <code>A</code> as <code>65</code> (decimal integer), <code>0x41</code> (hexadecimal number), or <code>'A'</code> (character with single quotations around it).</td>
+</tr>
+<tr>
+<td style="text-align: left;">c. What is the syntax for a <code>switch-case</code> statement in C, and when is it useful?</td>
+<td style="text-align: left;">You will be using a <code>switch-case</code> statement to more easily process user input to a multi-option menu. See <a href="https://www.tutorialspoint.com/cprogramming/switch_statement_in_c.htm">switch statement from tutorialspoint.com</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">d. What is an analog to digital converter (ADC)?</td>
+<td style="text-align: left;">You will be using an analog to digital converter in this section and in your semester project. Can be found in the <a href="https://learn.sparkfun.com/tutorials/analog-to-digital-conversion/all">Analog to Digital Conversion Tutorial on Sparkfun.com</a> and in section 12.8.5 of <a href="https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1470699914&amp;sr=1-1&amp;keywords=practical+electronics+for+inventors+4th+edition">Scherz &amp; Monk</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">e. What is a successive approximation register (SAR) ADC?</td>
+<td style="text-align: left;">You will be using a SAR-type ADC built into the PSoC. <a href="https://www.maximintegrated.com/en/design/technical-documents/tutorials/1/1080.html">This article from Maxim Integrated explains how they work</a>. It is recommended that you skim the document.</td>
+</tr>
+<tr>
+<td style="text-align: left;">f. What is a hexadecimal number and how do I interpret it?</td>
+<td style="text-align: left;">Microcontrollers store data in binary format. Hexadecimal is an easier way to view binary data, and is needed to complete this section. Can be found in the <a href="https://learn.sparkfun.com/tutorials/hexadecimal/all">Hexadecimal Tutorial on Sparkfun.com</a> and in Section 12.1.2 of <a href="https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1470699914&amp;sr=1-1&amp;keywords=practical+electronics+for+inventors+4th+edition">Scherz &amp; Monk</a>.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Watch the video <a href="https://www.youtube.com/watch?v=IyGwvGzrqp8">PROTOCOLS: UART - I2C - SPI - Serial Communications</a> to learn about UART and RS-232 communications that you will be using in this assignment. What you learn in this video will help you understand later instructions (the PuTTY application in Windows and the UART component in PSoC Creator).</p>
+</li>
+<li>
+<p>If you haven't already, download and install the <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> terminal program (Windows only). This program will be used to display text sent over the USB port on the PSoC.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image5.png" data-desc-position="bottom"><img alt="" src="image5.png" style="max-height:200px;"></a></p>
+<p><em><strong>Figure 1:</strong> Potentiometer in to PSoC Pin</em></p>
+</li>
+<li>
+<p>Construct the circuit above on a breadboard using a 10 kΩ potentiometer from your kit. Use a multimeter set to measure resistance to determine the pinout (specifically, which pin the wiper is connected to) of the potentiometer. Power connection VCC can be connected to a VDD pin on the CY8CKIT-042. The ground connection can be connected to a GND pin on the CY8CKIT-042. Determine a suitable analog input pin by referencing the Appendix of the <a href="#resources">Prototyping Kit Guide appropriate for the microcontroller you are using</a>.</p>
+<p><em>Next, you will need to set up a code example to send data from the PSoC to a terminal program on your computer.</em></p>
+</li>
+</ol>
+<h3 id="creating-a-new-psoc-project-and-top-design">Creating a new PSoC project and top design</h3>
+<ol>
+<li>Open PSoC Creator, create a new workspace for ICC4 and a new project for the CY8CKIT-042. Create a blank project, and call it something descriptive like "ADC-to-UART".</li>
+<li>Refer to page 23 of the CY8CKIT-042 PSoC 4 Pioneer Kit Guide and page 34 &amp; 98 of the CY8CKIT-042-BLE-A Bluetooth Low Energy (BLE) Pioneer Kit Guide to get a sense of what you need to connect on your PSoC board to enable UART Rx and Tx. The back of your board also includes a summary of the connections required.</li>
+<li>Go to the Top Design. Add a UART module. This will automatically create a digital input pin (<code>Rx_1</code>) and digital output pin (<code>Tx_1</code>) already connected to it.</li>
+<li>In the Top Design, add a Sequencing SAR ADC module. Open the module to configure it further.<ol>
+<li>In the General tab, set <code>Vref</code> select to <code>VDDA</code>. This is the maximum voltage that the ADC can sample. <code>VDDA</code> corresponds with the voltage on the <code>VDDA</code> pin. Also set "Single ended negative input" to <code>Vref</code>, and set the "Single ended result format" to Unsigned.</li>
+<li>In the Channels tab, set Sequenced channels to 1. You will only be using one ADC channel at this time. Make sure the mode for the remaining channel is Single-ended (not differential). Leave the INJ channel at Diff.</li>
+</ol>
+</li>
+<li>Add 1 Analog Pin to the Top Design, name it if you choose, and assign it to the port you connected the potentiometer to above. Create a wire from the Analog Pin to the input of the Sequencing SAR ADC module.</li>
+<li>Go to the "Design Wide Resources → pins" page in your workspace and select the appropriate pin numbers based on your reading in step 4 above. Select a pin for reading an analog value into your ADC as well.</li>
+<li>Compile your project to automatically generate source files for the UART and ADC modules you just added.</li>
+</ol>
+<h3 id="writing-code-to-output-your-initials-to-putty">Writing code to output your initials to PuTTY</h3>
+<ol>
+<li>In the "generated" source portion of your project, open up and read through <code>UART_1.h</code> and <code>UART_1.c</code>. Identify the functions for initializing and starting the UART_1 subsystem, as well as the functions for sending both a single character and a string of information to the TX buffer. Identify the variables required to call the functions as well as the type of values returned by the functions, if applicable.</li>
+<li>Add content to <code>main.c</code>:<ol>
+<li>Add <code>#include "stdio.h"</code> to the top of the file, which will add the <code>stdio</code> library for using functions like <code>printf()</code> and <code>`sprintf()</code></li>
+<li>Add the <code>UART_1</code> start and initialization function identified above to the <code>main.c</code> before the main <code>for(;;)</code> loop is called.</li>
+<li>Inside the main <code>for</code> loop, add a function for sending one character over the Tx buffer. Call the function twice, sending the initials of your name. Call it two more times, sending the <code>'\r'</code> (carriage return) and <code>'\n'</code> (linefeed) characters.</li>
+<li>Compile and download your code to the PSoC</li>
+</ol>
+</li>
+<li>
+<p>Open the device manager (Start → type "device..." and it will find device manager for you). Navigate to Ports (COM &amp; LPT). Identify the port of the connected KitProg device.</p>
+<blockquote>
+<p><em>Hint:</em> <a href="https://www.zaber.com/software/docs/motion-library/ascii/howtos/find_right_port/">How to find the right serial port name</a></p>
+</blockquote>
+</li>
+<li>
+<p>Open PuTTY and create a new serial session. Type in the com port of the connected KitProg device found previously (eg "COM2"); select the speed of the port to be the same as that found in the UART module of your Top Design, above. This value can be changed, but they both have to be changed to the same value. (9600 is a standard, slow transmission rate, for example). You should see your initials printed in the terminal.</p>
+<blockquote>
+<p><em>Hint:</em> <a href="https://www.youtube.com/watch?v=dO-BMOzNKcI">PuTTY Tutorial for Serial COM (step-by-step guide)</a></p>
+</blockquote>
+</li>
+</ol>
+<h3 id="reading-an-analog-value-and-outputting-it-to-putty">Reading an analog value and outputting it to PuTTY</h3>
+<p>Open <code>main.c</code> and modify the existing code to do the following:</p>
+<ol>
+<li>Create a variable of type <code>uint16</code> to hold the ADC result.</li>
+<li>Initialize and start the software UART (can be found in the software UART component datasheet).</li>
+<li>Initialize and start the ADC (can be found in the ADC component datasheet).</li>
+<li>Call the ADC <code>StartConvert()</code> function to start the conversion process.</li>
+<li>Set the ADC to wait for a conversion to complete before returning a value from the function call. Use the following function: <code>ADC_IsEndConversion(ADC_WAIT_FOR_RESULT)</code> (where ADC is the name of your ADC component in the top design)</li>
+<li>
+<p>Within the <code>for(;;)</code></p>
+<ol>
+<li>Output a data label to the software UART (e.g., "ADC Value:")</li>
+<li>
+<p>Read ADC channel 0 and store the value in the variable you created for the ADC result</p>
+<blockquote>
+<p><em>Hint 1:</em> The function to read a 16-bit sample from the ADC is in the API section of the ADC datasheet.</p>
+</blockquote>
+<p></p><p></p><p></p>
+<blockquote>
+<p><em>Hint 2:</em> <a href="https://www.tutorialspoint.com/cprogramming/c_functions.htm">How to call a function</a> from tutorialspoint.com</p>
+</blockquote>
+</li>
+<li>
+<p>Output the ADC value in two-byte hexadecimal format to the software UART. You can the <code>sprintf()</code> function along with a string you declare to format a string in a hexadecimal format.</p>
+</li>
+<li>
+<p>Output a carriage return and line feed to the software UART.</p>
+<blockquote>
+<p><em>Hint:</em> See the API section of the software UART datasheet.</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p><em>Note:</em> You may comment out any other code from the example that is not needed to achieve the above.</p>
+</blockquote>
+</li>
+<li>
+<p>Compile, download, and run your code on the PSoC. When you connect to the PSoC with PuTTY, you should see the ADC values change in PuTTY when you turn the potentiometer. <strong>Note the maximum (largest) value that can be read by the ADC. This will be needed in the future.</strong></p>
+</li>
+</ol>
+<h2 id="individual-demonstration-of-proficiency">Individual Demonstration of Proficiency</h2>
+<p>In class, demonstrate the following <strong>live</strong> to a member of the Teaching Team by the end of class:</p>
+<ol>
+<li>
+<p>Walk through your breadboard with the Teaching Team member and explain how the potentiometer works. Then, connect the CY8CKIT-042 to your computer and launch PSoC Creator.</p>
+</li>
+<li>
+<p>Compile, download, and demonstrate your solution to the "Reading an analog value and outputting it to PuTTY" section above, where you should see the ADC values change in PuTTY when you turn the potentiometer.</p>
+</li>
+</ol>
+<p><strong>A live demonstration by the end of class is required. No late demonstrations will be accepted.</strong></p>
+<h2 id="canvas-submission">Canvas Submission</h2>
+<p><strong>No Canvas submission is required.</strong></p>
+<h2 id="rubric">Rubric</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Item</strong></th>
+<th style="text-align: left;"><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Demonstration 1</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">Demonstration 2</td>
+<td style="text-align: left;">40</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: left;"><strong>50</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="devices">Devices</h2>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image8.jpg" data-desc-position="bottom"><img alt="" src="image8.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image4.jpg" data-desc-position="bottom"><img alt="" src="image4.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image10.jpg" data-desc-position="bottom"><img alt="" src="image10.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digital Multimeter</td>
+<td>Oscilloscope</td>
+<td>Power Supply</td>
+</tr>
+<tr>
+<td>(Not Used)</td>
+<td>(Used)</td>
+<td>(Used)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image6.jpg" data-desc-position="bottom"><img alt="" src="image6.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image1.jpg" data-desc-position="bottom"><img alt="" src="image1.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image7.jpg" data-desc-position="bottom"><img alt="" src="image7.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Function Generator</td>
+<td>Waveform Generator</td>
+<td>Soldering Iron</td>
+</tr>
+<tr>
+<td>(Not Used)</td>
+<td>(Not Used)</td>
+<td>(Not Used)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probes">Probes</h3>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image9.jpg" data-desc-position="bottom"><img alt="" src="image9.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image3.jpg" data-desc-position="bottom"><img alt="" src="image3.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image2.jpg" data-desc-position="bottom"><img alt="" src="image2.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oscilloscope</td>
+<td>Digital Multimeter</td>
+<td>Soldering Iron</td>
+</tr>
+<tr>
+<td>(Used)</td>
+<td>(Not Used)</td>
+<td>(Not Used)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2024 Dan Aukes and Shawn Jordan
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

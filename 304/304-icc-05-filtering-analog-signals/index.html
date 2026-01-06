@@ -1,0 +1,1052 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+            
+
+        
+
+    
+      
+        <title>304 ICC5 -- Filtering Analog Signals - EGR304-S-2025 Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objectives" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-header__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EGR304-S-2025 Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              304 ICC5 -- Filtering Analog Signals
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  304
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-nav__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    EGR304-S-2025 Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    304
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    304
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    project description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3X4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3X4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    course sequence requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    submission best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bill of Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-to-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prior to Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-to-demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prior to Demonstration of Proficiency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individual Demonstration of Proficiency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canvas-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas Submission
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grading
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Devices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source/edit/main/docs/304/304-icc-05-filtering-analog-signals/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>304 ICC5 -- Filtering Analog Signals</h1>
+
+<blockquote>
+<p>This assignment is a <strong><em>paired in-class checkoff</em></strong>. An <strong>individual</strong> live demonstration is required. You may work in pairs (<strong>one</strong> partner), but must individually demonstrate your working breadboard.</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>In this assignment, you will learn to design filter circuits for analog signal conditioning. These circuits are common for designing on an analog circuit, and will be used in your semester project. You will also learn how to use benchtop oscilloscopes to observe signal plots and waveforms from output of signal generators as well as how to use these generators to output appropriate signals. Oscilloscopes will be used for observing how a filter circuit filters out unwanted parts of analog signals.</p>
+<p>You must demonstrate with your partner proficiency in:</p>
+<ol>
+<li>Designing and breadboarding a low-pass filter.</li>
+<li>Setting up a function generator with specific desired frequencies.</li>
+<li>Testing and measuring output signals of a function generator and a low-pass filter by using an oscilloscope.</li>
+</ol>
+<blockquote>
+<p>This in-class checkoff requires advance work in order to complete it within one class period. Please read through the ICC, read all datasheets, and prepare your circuits as much as possible.</p>
+</blockquote>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Scherz &amp; Monk, Chapter 7: Hands on Electronics<ul>
+<li>Section 7.4.1 How Scopes Work</li>
+<li>Section 7.4.7 thru 7.4.8 - Scope Applications, Measuring Impedances</li>
+<li>Section 7.5.5-7.5.7 Oscilloscope, Probes, and Function Generator</li>
+</ul>
+</li>
+<li>Scherz &amp; Monk Chapter 9: Basic Filters &amp; Passive Filter Design</li>
+<li><a href="https://www.bkprecision.com/products/signal-generators/4011A">BK Precision 5 MHz Function Generator (Model 4011A)</a> (<a href="https://bkpmedia.s3.us-west-1.amazonaws.com/downloads/manuals/en-us/4010A_4011A_manual.pdf">manual</a>)</li>
+<li><a href="https://www.keysight.com/us/en/support/DSOX4024A/oscilloscope-200-mhz-4-analog-channels.html">Agilent InfiniiVision Mixed Signal Oscilloscope (Model 4024A)</a> (<a href="https://www.keysight.com/us/en/assets/9018-03807/user-manuals/9018-03807.pdf">manual</a>)</li>
+<li>Video Tutorials:<ul>
+<li>In Class Checkoffs -- Adjusting output frequencies through the function generator : <a href="https://www.youtube.com/watch?v=xo40zzxYB48">https://www.youtube.com/watch?v=xo40zzxYB48</a></li>
+<li>In Class Checkoffs -- Oscilloscope Part 1 - Initial setups on an oscilloscope: <a href="https://www.youtube.com/watch?v=ot87_OiE_cQ">https://www.youtube.com/watch?v=ot87_OiE_cQ</a></li>
+<li>In Class Checkoffs -- Oscilloscope Part 2 - Adding measurements through an oscilloscope: <a href="https://www.youtube.com/watch?v=1djtVekO_kI">https://www.youtube.com/watch?v=1djtVekO_kI</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="bill-of-materials">Bill of Materials</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Item</strong></th>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: left;"><strong>Value(s)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Breadboard</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Jumper wires</td>
+<td style="text-align: left;">Several</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Capacitor</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Various: 0.1 µF (104), 10 µF (106)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resistors</td>
+<td style="text-align: left;">Several</td>
+<td style="text-align: left;">Various</td>
+</tr>
+<tr>
+<td style="text-align: left;">Benchtop function generator</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Benchtop oscilloscope</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="prior-to-class">Prior to Class</h2>
+<ol>
+<li>Read Scherz &amp; Monk Sections 9.1 and 9.2 to learn what a filter is.</li>
+</ol>
+<h2 id="prior-to-demonstration-of-proficiency">Prior to Demonstration of Proficiency</h2>
+<ol>
+<li>Discuss what you learned from Scherz &amp; Monk Sections 9.1 and 9.2 with your partner.</li>
+<li>Design a low-pass filter with a 50 Hz cutoff. Look in Section 9.2 of the textbook, find the equation of cutoff frequency (<span class="arithmatex">\(f_c\)</span>) in a low-pass filter. You need to select one of two existing capacitors first (i.e., select an existing value of capacitance - 0.1 µF (104) or 10 µF (106)). Then, apply the equation you find to calculate the value of resistance. Select a resistor that has a corresponding resistance with the resistance you calculated.</li>
+<li>Construct a low-pass filter circuit on your breadboard with a resistor and a capacitor you selected. You may review Section 9.2 of the textbook for the circuit.</li>
+<li>Turn on the BK Precision function generator and setup by:<ol>
+<li>Turning knobs of "DUTY CYCLE", "CMOS LEVEL", "DC OFFSET", and "OUTPUT LEVEL" all the way down, and then back up the output level between 25 - 50%.</li>
+<li>Turning knobs of "COARSE" and "FINE" all the way down. You will turn the COARSE knob to set the frequency.</li>
+<li>Making sure buttons for "DUTY CYCLE", "CMOS LEVEL", "DC OFFSET", and "-20 dB" are <em>off</em>.</li>
+<li>Setting the waveform as a sine wave by pressing the sine wave button.</li>
+</ol>
+</li>
+<li>Set the frequency at <strong>5 Hz</strong> for the output signal from the function generator. Press the range button 5 to output and turn the <strong>COARSE</strong> knob until reaching a frequency of 5 Hz.<ul>
+<li><a href="https://www.youtube.com/watch?v=xo40zzxYB48">Video Demo 1 - Adjusting frequencies through the function generator</a>.</li>
+</ul>
+</li>
+<li>Connect the probes of the function generator to the input of your circuit as well as one of four probes on the Agilent oscilloscope with jumper wires. Make sure the black alligator cable on the oscilloscope connects to ground to enable referencing higher output.</li>
+<li>Connect another set of oscilloscope probes to the output of your low-pass filter circuit. Review Section 9.2 of the textbook and find which node is the output in a low-pass filter circuit. Make sure to ground the black alligator cable on the oscilloscope.</li>
+<li>Turn on and set up the Agilent oscilloscope. Watch the following videos and learn how to set up an oscilloscope, zoom to useful signal waveforms, and measure frequencies. Then, add measurements of frequencies to measure output frequencies of signals from the function generator and your low-pass filter.<ul>
+<li><a href="https://www.youtube.com/watch?v=ot87_OiE_cQ">Video Demo 2 Part 1 - Initial setups on an oscilloscope</a></li>
+<li><a href="https://www.youtube.com/watch?v=1djtVekO_kI">Video Demo 2 Part 2 - Adding measurements through an oscilloscope</a></li>
+</ul>
+</li>
+<li>(<em>Optional</em>) Auto-trigger the output frequency from your low-pass filter by referencing the output frequency from the function generator.</li>
+<li>Adjust the <strong>OUTPUT LEVEL</strong> knob of the BK Precision function generator so that the oscilloscope measures 5V peak to peak amplitude of the output signal.</li>
+<li>Repeat steps 4-11 with the function generator set to <strong>500Hz</strong>. What is the difference you see at the output of the low-pass filter?</li>
+<li>Flip the position of the resistor and capacitor in the circuit to create a high pass filter. Repeat steps 5-11, at both 5Hz and 500Hz. The cutoff frequency should be the same, but the behavior will be quite different. Can you tell the difference?</li>
+</ol>
+<h2 id="individual-demonstration-of-proficiency">Individual Demonstration of Proficiency</h2>
+<p>In class, demonstrate the following <strong>live</strong> to a member of the Teaching Team by the end of class:</p>
+<ol>
+<li>Demonstrating, with the oscilloscope, that the output of the function generator is correctly set to at 5Hz, 5V amplitude.</li>
+<li>Demonstrating, with the oscilloscope, your measurement of amplitude and frequency of the signal at the output of the low-pass filter at 5Hz.</li>
+<li>Demonstrating, with the oscilloscope, that the output of the function generator is correctly set to at 500Hz, 5V amplitude.</li>
+<li>Demonstrating, with the oscilloscope, your measurement of amplitude and frequency of the signal at the output of the low-pass filter at 500Hz.</li>
+<li>Demonstrating, with the oscilloscope, your measurement of amplitude and frequency of the signal at the output of the high-pass filter at 5Hz.</li>
+<li>Demonstrating, with the oscilloscope, your measurement of amplitude and frequency of the signal at the output of the high-pass filter at 500Hz.</li>
+</ol>
+<p><strong>A live demonstration by the end of class is required. No late demonstrations will be accepted.</strong></p>
+<h2 id="canvas-submission">Canvas Submission</h2>
+<p><strong>No Canvas submission is required.</strong></p>
+<h2 id="grading">Grading</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Demonstration</strong></th>
+<th><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.  Demonstration 1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2.  Demonstration 2</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3.  Demonstration 3</td>
+<td>10</td>
+</tr>
+<tr>
+<td>4.  Demonstration 4</td>
+<td>10</td>
+</tr>
+<tr>
+<td>5.  Demonstration 5</td>
+<td>10</td>
+</tr>
+<tr>
+<td>6.  Demonstration 6</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>50</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="devices">Devices</h3>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image9.jpg" data-desc-position="bottom"><img alt="" src="image9.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image4.jpg" data-desc-position="bottom"><img alt="" src="image4.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image8.jpg" data-desc-position="bottom"><img alt="" src="image8.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digital Multimeter</td>
+<td>Oscilloscope</td>
+<td>Power Supply</td>
+</tr>
+<tr>
+<td>(Not Used)</td>
+<td>(Used)</td>
+<td>(Not Used)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image3.jpg" data-desc-position="bottom"><img alt="" src="image3.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image10.jpg" data-desc-position="bottom"><img alt="" src="image10.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image1.jpg" data-desc-position="bottom"><img alt="" src="image1.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Function Generator</td>
+<td>Waveform Generator</td>
+<td>Soldering Iron</td>
+</tr>
+<tr>
+<td>(Used)</td>
+<td>(Not Used)</td>
+<td>(Not Used)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probes">Probes</h3>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image6.jpg" data-desc-position="bottom"><img alt="" src="image6.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image7.jpg" data-desc-position="bottom"><img alt="" src="image7.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image2.jpg" data-desc-position="bottom"><img alt="" src="image2.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oscilloscope</td>
+<td>Digital Multimeter</td>
+<td>Soldering Iron</td>
+</tr>
+<tr>
+<td>(Used)</td>
+<td>(Not Used)</td>
+<td>(Not Used)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2024 Dan Aukes and Shawn Jordan
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

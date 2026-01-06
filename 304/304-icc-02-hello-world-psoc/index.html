@@ -1,0 +1,1042 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+            
+
+        
+
+    
+      
+        <title>304 ICC2 -- Hello, World! (PSoC) - EGR304-S-2025 Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objectives" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-header__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EGR304-S-2025 Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              304 ICC2 -- Hello, World! (PSoC)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  304
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-nav__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    EGR304-S-2025 Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    304
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    304
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    project description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3X4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3X4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    course sequence requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    submission best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parts-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parts Needed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completed-prior-to-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completed Prior to Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completed-in-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completed in Class
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#individual-demonstration-of-proficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Individual Demonstration of Proficiency
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canvas-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas Submission
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grading
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Devices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frequently Asked Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source/edit/main/docs/304/304-icc-02-hello-world-psoc/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>304 ICC2 -- Hello, World! (PSoC)</h1>
+
+<blockquote>
+<p>This assignment is a <strong><em>paired in-class checkoff</em></strong>. An <strong>individual</strong> live demonstration is required. You may work in pairs (<strong>one</strong> partner), but must individually demonstrate your working breadboard.</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>To individually demonstrate proficiency in installing and running the Cypress PSoC Integrated Development Environment (IDE) tools to program sample code onto a microcontroller, and to modify that code to add additional functionality.</p>
+<blockquote>
+<p>This in-class checkoff requires advance work in order to complete it within one class period. Please read through the ICC, read all datasheets and prepare your circuits as much as possible.</p>
+</blockquote>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Videos<ul>
+<li><a href="https://youtu.be/2vDoY1uVJ-M">Video Walkthrough of ICC2</a> <em>(Thanks to Jacob S)</em></li>
+<li><a href="https://youtu.be/CVt31tGO92E">Presentation from Dr. Patrick Kane</a> <em>(Infineon)</em></li>
+</ul>
+</li>
+<li>Scherz &amp; Monk, Sections 3.3, 5.3, 7.3, 13.5</li>
+<li><a href="https://www.dropbox.com/sh/iwzj4pjj6iwzwon/AABn9jsjRaj-Rx9nui4SWdnca?dl=0">PSoC workshop slides, labs, and templates</a></li>
+<li><a href="https://canvas.asu.edu">Canvas</a> discussion board</li>
+<li><a href="https://www.youtube.com/watch?v=0Mo9ACC5YW0&amp;t=122s&amp;ab_channel=FutureElectronics">Demonstration</a> of similar lab by Cypress/Infineon</li>
+<li>Embedded Systems Design Website Tutorials<ul>
+<li><a href="https://embedded-systems-design.github.io/connecting-to-the-psoc/">Connecting to the PSoC</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="parts-needed">Parts Needed</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Detail</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CY8CKIT-042 <em>or</em> CY8CKIT-042-BLE PSoC</td>
+<td>1</td>
+<td>distributed in class</td>
+</tr>
+<tr>
+<td>USB mini B cable</td>
+<td>1</td>
+<td>included in PSoC kit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="completed-prior-to-class">Completed Prior to Class</h2>
+<p><em>Complete all of the steps below prior to the demonstration of proficiency.</em></p>
+<p>Note: You may use either a <a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/?utm_source=cypress&amp;utm_medium=referral&amp;utm_campaign=202110_globe_en_all_integration-dev_kit">PSoC 4 Pioneer Kit</a> or a <a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/?utm_source=cypress&amp;utm_medium=referral&amp;utm_campaign=202110_globe_en_all_integration-dev_kit">PSoC 4 BLE Pioneer Kit</a> to complete this assignment. You will be using the BLE Pioneer Kit for your team project.</p>
+<ol>
+<li>If you don't have a PSoC 4 Pioneer Kit (BLE or regular), you can check one out from PRLTA 109, or buy one from Cypress (<a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/?utm_source=cypress&amp;utm_medium=referral&amp;utm_campaign=202110_globe_en_all_integration-dev_kit">BLE</a>, <a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/?utm_source=cypress&amp;utm_medium=referral&amp;utm_campaign=202110_globe_en_all_integration-dev_kit">regular</a>).</li>
+<li>
+<p>If you have not completed it already, follow the instructions in the <a href="https://embedded-systems-design.github.io/egr304-software-stack/">EGR 304 Software Install</a> page on the Embedded Systems Design website to download the full software stack, including PSoC Creator, the IDE for the PSoC microcontroller</p>
+<blockquote>
+<p><em>If you do not have a laptop that you can bring in for demonstration, you can use one of the computers in PRLTA 103</em></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="completed-in-class">Completed in Class</h2>
+<ol>
+<li>Complete the <a href="https://embedded-systems-design.github.io/psoc-hello-world/">PSoC Hello World Lab</a>.</li>
+<li>
+<p>Practice measuring the supply voltage for the Pioneer Kit using an Agilent benchtop (not handheld) multimeter.<br> <em>Hint:</em> Check the Pioneer Kit Guide on the main product page on the Cypress website for information on where the power pins are.</p>
+<p>Next, you will modify the project to make a button enable or disable the blinking of the LED.</p>
+<blockquote>
+<p><em>Note:</em> The LED should blink at the same frequency as it did above, but only when the button is pressed.</p>
+</blockquote>
+</li>
+<li>
+<p>Duplicate the project and add a Digital Input Pin connected to <code>P0[7] SCB1:SPI:SS0, WAKEUP</code>. This is connected to <code>SW2 P0[7]</code> on the Pioneer Kit. On the BLE Pioneer Kit, <code>SW2</code> is connected to <code>P2[7]</code>. Make sure the Drive mode of the input pin is set to <code>Resistive pull up</code> so</p>
+<blockquote>
+<p><em>Note:</em> Workspace explorer will have two projects open now, make sure you are in the correct project for pins, main.c etc. To select the appropriate project, navigate to it in the workspace explorer and select "activate project"</p>
+</blockquote>
+</li>
+<li>
+<p>Finish modifying the project so that the LED blinks only when the button is pressed. For an example project that uses <code>SW2</code>, see the element14 <a href="https://community.element14.com/products/devtools/psoc4pioneerkit/f/forum/21143/psoc-4-pioneer-kit-community-project-17---2-channel-oscope-with-graphicslcd">oscilloscope project</a>. To better understand how switches work and ways to mitigate "bouncing", learn about <a href="https://www.allaboutcircuits.com/technical-articles/switch-bounce-how-to-deal-with-it/">switch debouncing</a>.</p>
+</li>
+</ol>
+<h2 id="individual-demonstration-of-proficiency">Individual Demonstration of Proficiency</h2>
+<p>In class, demonstrate the following <strong>live</strong> to a member of the Teaching Team by the end of class:</p>
+<ol>
+<li>Connect the Pioneer Kit (or Pioneer BLE Kit) to your computer and launch PSoC Creator. Open your first Blinking LED project, compile, and download it to the Pioneer Kit.</li>
+<li>Demonstrate your first Blinking LED project working correctly.</li>
+<li>Open your second Blinking LED + Button project, compile, and download it to the (BLE) Pioneer Kit.</li>
+<li>Demonstrate your second Blinking LED + Button project working correctly.</li>
+</ol>
+<p><strong>A live demonstration by the end of class is required. No late demonstrations will be accepted.</strong></p>
+<h2 id="canvas-submission">Canvas Submission</h2>
+<p><strong>No Canvas submission is required.</strong></p>
+<h2 id="grading">Grading</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Demonstration Item</strong></th>
+<th style="text-align: left;"><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1. Successful download of project 1</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">2. Successful demonstration of Blinking LED</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">3. Successful download of project 2</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">4. Successful demonstration of Blinking LED with button</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: left;"><strong>50</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="devices">Devices</h2>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image8.jpg" data-desc-position="bottom"><img alt="" src="image8.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image10.jpg" data-desc-position="bottom"><img alt="" src="image10.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image7.jpg" data-desc-position="bottom"><img alt="" src="image7.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digital Multimeter</td>
+<td>Oscilloscope</td>
+<td>Power Supply</td>
+</tr>
+<tr>
+<td>(optional)</td>
+<td>(Not Used)</td>
+<td>(optional)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image2.jpg" data-desc-position="bottom"><img alt="" src="image2.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image5.jpg" data-desc-position="bottom"><img alt="" src="image5.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image4.jpg" data-desc-position="bottom"><img alt="" src="image4.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Function Generator</td>
+<td>Waveform Generator</td>
+<td>Soldering Iron</td>
+</tr>
+<tr>
+<td>(Not Used)</td>
+<td>(Not Used)</td>
+<td>(Not Used)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probes">Probes</h3>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image3.jpg" data-desc-position="bottom"><img alt="" src="image3.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image6.jpg" data-desc-position="bottom"><img alt="" src="image6.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image1.jpg" data-desc-position="bottom"><img alt="" src="image1.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oscilloscope</td>
+<td>Digital Multimeter</td>
+<td>Soldering Iron</td>
+</tr>
+<tr>
+<td>(Not Used)</td>
+<td>(optional)</td>
+<td>(Not Used)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>Q:</strong> May I use the <a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/?utm_source=cypress&amp;utm_medium=referral&amp;utm_campaign=202110_globe_en_all_integration-dev_kit">PSoC 4 BLE Pioneer Kit</a> instead of the <a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/?utm_source=cypress&amp;utm_medium=referral&amp;utm_campaign=202110_globe_en_all_integration-dev_kit">PSoC 4 Pioneer Kit</a>?</p>
+<p><strong>A:</strong> Yes. If you are using the BLE Pioneer Kit, the LED pins are: Red = <code>P2[6]</code>, Blue = <code>P3[7]</code>, Green = <code>P3[6]</code>. The switch is on <code>P2[7]</code>.</p>
+<p><strong>Q:</strong> How do I choose the correct PSoC when creating a new project? The interface is slightly different from the tutorial.s</p>
+<p><strong>A:</strong> Click the "Target Device" radio button and choose "<launch device selector...>" from the drop-down menu. Then, choose the part number that matches with your specific PSoC. (Hint: The part number of the microcontroller is written on the top of the chip, and is sometimes written near the chip on the printed circuit board in the silkscreen).</launch></p>
+<p><strong>Q:</strong> How do I change the target device for a PSoC project that I already created?</p>
+<p><strong>A:</strong> In PSoC Creator, right-click on your project in the Workspace Explorer and choose "Device Selector...". Select the new device to match the part number printed on the circuit board.</p>
+<p><strong>Q:</strong> Something is wrong with my PSoC. I have followed the PDF instructions and videos online, but my LED still won't blink and PSoC Creator can't find a target to program. What should I do?</p>
+<p><strong>A:</strong> Try the following:</p>
+<ol>
+<li>
+<p>Borrow a classmate's PSoC and see if it works on your computer. If it does, you may have a bad PSoC</p>
+</li>
+<li>
+<p>Come into office hours so the teaching team can help you debug.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2024 Dan Aukes and Shawn Jordan
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

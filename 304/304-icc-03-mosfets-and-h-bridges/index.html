@@ -1,0 +1,1242 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+
+<meta name="robots" content="nofollow">
+
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+            
+
+        
+
+    
+      
+        <title>304 ICC3 -- MOSFETs and H-Bridges - EGR304-S-2025 Assignments</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-green" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#objectives" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-header__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EGR304-S-2025 Assignments
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              304 ICC3 -- MOSFETs and H-Bridges
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  304
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../3x4/course-sequence-requirements/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3X4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EGR304-S-2025 Assignments" class="md-nav__button md-logo" aria-label="EGR304-S-2025 Assignments" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    EGR304-S-2025 Assignments
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Welcome!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    304
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    304
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-description/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    project description
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3X4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3X4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/course-sequence-requirements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    course sequence requirements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3x4/submission-best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    submission best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objectives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objectives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parts-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parts Needed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prior-to-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prior to Verification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prior to Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motor-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motor Preparation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mosfet-circuit-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MOSFET Circuit Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#h-bridge-motor-controller-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        H-Bridge Motor Controller Layout
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demonstration-of-proficiency-in-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demonstration of Proficiency in Pairs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canvas-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canvas Submission
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rubric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Devices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/embedded-systems-design/project_esd-304-off-cycle-assignments-source/edit/main/docs/304/304-icc-03-mosfets-and-h-bridges/index.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+  <h1>304 ICC3 -- MOSFETs and H-Bridges</h1>
+
+<blockquote>
+<p>This assignment is a <strong><em>paired in-class checkoff</em></strong>. An <strong>individual</strong> live demonstration is required. You may work in pairs (<strong>one</strong> partner), but must individually demonstrate your working breadboard.</p>
+</blockquote>
+<h2 id="objectives">Objectives</h2>
+<p>The goal for this in-class checkoff is to learn how to use transistors as switches for the purposes of driving high-current actuators and other "outputs". You will gain practice at designing basic switching circuits utilizing metal-oxide semiconductor field effect transistors (MOSFETs) and bidirectional switching circuits using an H-Bridge.</p>
+<blockquote>
+<p>This in-class checkoff requires advance work in order to complete it within one class period. Please read through the ICC, read all datasheets and prepare your circuits as much as possible.</p>
+</blockquote>
+<h2 id="resources">Resources</h2>
+<ul>
+<li>Videos<ul>
+<li><a href="https://www.youtube.com/watch?v=2h4-ymfWU7I">Overview Video</a> (Thanks Saikat!)</li>
+<li><a href="https://www.youtube.com/watch?time_continue=1&amp;v=I_0KiCHUrXg&amp;feature=emb_logo">Example</a> of checking off Part 1</li>
+<li><a href="https://www.youtube.com/watch?v=JdKzn-xicGc&amp;feature=emb_logo">Example</a> of checking off Part 2</li>
+</ul>
+</li>
+<li>Scherz &amp; Monk<ul>
+<li>Section 4.2 Diodes<ul>
+<li>4.2.5 Diode Applications</li>
+</ul>
+</li>
+<li>Section 4.3: Transistors<ul>
+<li>4.3.1 - Introduction</li>
+<li>4.3.4 - MOSFETs</li>
+</ul>
+</li>
+<li>Chapter 11: Voltage Regulators and Power Supplies</li>
+</ul>
+</li>
+<li><a href="https://www.bkprecision.com/products/power-supplies/1671A">BK Precision Triple-Output 30V, 5A Digital Display DC Power Supply (Model 1671)</a> (<a href="https://bkpmedia.s3.amazonaws.com/downloads/manuals/en-us/1671A_manual.pdf">manual</a>)</li>
+<li><a href="https://www.keysight.com/us/en/support/34461A/digital-multimeter-6-5-digit-truevolt-dmm.html">Agilent Digital Multimeter (Model 34461A)</a> (<a href="https://www.dropbox.com/s/futmq59a8ftekqs/Agilent_DMM_34461A.pdf?dl=0">manual</a>)</li>
+<li>Canvas discussion board</li>
+<li>The Embedded Systems Design <a href="https://embedded-systems-design.github.io">website</a></li>
+<li><a href="https://www.electronics-tutorials.ws/transistor/tran_7.html">MOSFET as a Switch</a> from ElectronicsTutorials</li>
+</ul>
+<h2 id="parts-needed">Parts Needed</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Quantity</strong></th>
+<th><strong>Detail</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5V Power Supply</td>
+<td>1</td>
+<td>from In-Class Checkoff #1</td>
+</tr>
+<tr>
+<td>AOTF2618L MOSFET</td>
+<td>1</td>
+<td>(<a href="https://www.digikey.com/product-detail/en/alpha-omega-semiconductor-inc/AOTF2618L/785-1442-5-ND/3603382">digikey</a>) (<a href="http://aosmd.com/res/data_sheets/AOTF2618L.pdf">datasheet</a>)</td>
+</tr>
+<tr>
+<td>FAN8100N H-Bridge</td>
+<td>1</td>
+<td>(<a href="https://www.digikey.com/en/products/detail/fairchild-semiconductor/FAN8100N/11558200">digikey</a>) (<a href="https://rocelec.widen.net/view/pdf/1pizbjqffm/FAIRS23777-1.pdf?t.download=true&amp;u=5oefqw">datasheet</a>)</td>
+</tr>
+<tr>
+<td>Gear Motor</td>
+<td>1</td>
+<td>(<a href="https://web.archive.org/web/20230923052123/https://www.allelectronics.com/mas_assets/media/allelectronics2018/spec/DCM-416.pdf">datasheet</a>) supplied in class, 1 per station <strong>(do not take with you)</strong></td>
+</tr>
+<tr>
+<td>1/4 Watt Resistors</td>
+<td>3</td>
+<td>10 k<span class="arithmatex">\(\Omega\)</span>, handed out previously</td>
+</tr>
+<tr>
+<td>Pushbutton Switches</td>
+<td>3</td>
+<td>handed out previously</td>
+</tr>
+<tr>
+<td>1N4007 Diode</td>
+<td>1</td>
+<td>handed out in class / previously</td>
+</tr>
+<tr>
+<td>Benchtop Power Supply</td>
+<td>1</td>
+<td>at lab stations</td>
+</tr>
+<tr>
+<td>9V, 3A Plug-in Power Supply</td>
+<td>1</td>
+<td>handed out in class / previously (<a href="https://www.amazon.com/gp/product/B09ZTKTLGW/">amazon link</a>)</td>
+</tr>
+<tr>
+<td>Benchtop Multimeter</td>
+<td>1</td>
+<td>at lab stations</td>
+</tr>
+<tr>
+<td>Capacitors</td>
+<td>2</td>
+<td>0.1 µF (104), handed out previously</td>
+</tr>
+</tbody>
+</table>
+<!-- | Gear Motor (variant 2) | 1            | ([mpja](https://www.mpja.com/12VDC-500-RPM-Gearhead-Motor/productinfo/35500+MD/)) supplied in class, 1 per station **(do not take with you)**                                                             |  -->
+
+<h2 id="prior-to-verification">Prior to Verification</h2>
+<ol>
+<li>Read the Scherz &amp; Monk textbook sections indicated above.</li>
+<li>Review the datasheets above.</li>
+<li>Look through Figure 4.18 of the textbook carefully. What is the purpose of flyback diodes?</li>
+<li>Follow the instructions below, to the best of your ability, to complete the circuits in advance before class begins.</li>
+</ol>
+<h3 id="motor-preparation">Motor Preparation</h3>
+<blockquote>
+<p><em>Note:</em> These instructions are for your reference. We will have a small number of motor driver chips and motors prepared in advance of ICC3.</p>
+</blockquote>
+<ol>
+<li>
+<p>Strip two 12" wires, leaving about 1/2 inch of metal exposed on either end. Twist the wire so that the ends don't fray.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image6.jpg" data-desc-position="bottom"><img alt="Figure" src="image6.jpg" style="max-height:200px;"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image15.jpg" data-desc-position="bottom"><img alt="Figure" src="image15.jpg" style="max-height:200px;"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image8.jpg" data-desc-position="bottom"><img alt="Figure" src="image8.jpg" style="max-height:200px;"></a></p>
+</li>
+<li>
+<p>Slide one end of the wire approximately halfway through the motor's electrical contact. Bend it back on itself and twist so that it is mechanically well-attached.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image4.jpg" data-desc-position="bottom"><img alt="Figure" src="image4.jpg" style="max-height:200px;"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image12.jpg" data-desc-position="bottom"><img alt="Figure" src="image12.jpg" style="max-height:200px;"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image17.jpg" data-desc-position="bottom"><img alt="Figure" src="image17.jpg" style="max-height:200px;"></a></p>
+</li>
+<li>
+<p>Turn on the soldering iron. Set the temperature to 500 °F. This can be done by selecting the iron and twirling your finger around the circle in a clockwise or counterclockwise direction until you reach your desired setpoint. Once set, press the return button to reach the main menu. Press the two side buttons simultaneously to activate the left or right iron, respectively.</p>
+</li>
+<li>
+<p>Solder the attached leads to the motor's contact. Avoid using prolonged heat, as this can melt the plastic.</p>
+</li>
+<li>
+<p>Solder the other exposed ends of the wire; this will help them stay rigid and allow you to repeatedly plug them into breadboards. Keep the amount of solder minimal so that the wire is rigid but slim enough to stick into the breadboard.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image5.jpg" data-desc-position="bottom"><img alt="Figure" src="image5.jpg" style="max-height:200px;"></a></p>
+<blockquote>
+<p><em><strong>Hint:</strong> You can also solder both leads to a 2x1 male header (located in Peralta Studio), for even easier insertion.</em></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Motor Driver Prep:</strong> Using pliers or the plier end of a wire stripper, bend back the heatsink pads of the FAN8100N Motor driver. This will allow you to insert the motor driver into the breadboard.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image9.jpg" data-desc-position="bottom"><img alt="Figure" src="image9.jpg" style="max-height:200px;"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image14.jpg" data-desc-position="bottom"><img alt="Figure" src="image14.jpg" style="max-height:200px;"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image23.jpg" data-desc-position="bottom"><img alt="Figure" src="image23.jpg" style="max-height:200px;"></a></p>
+</li>
+<li>
+<p>Solder jumper wires to each of the two pads. It will take longer for the pads to heat up because they are larger. Connect the soldered jumper wires to ground.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image3.jpg" data-desc-position="bottom"><img alt="Figure" src="image3.jpg" style="max-height:200px;"></a></p>
+</li>
+</ol>
+<h3 id="mosfet-circuit-design">MOSFET Circuit Design</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Critical Information and Concepts</strong></th>
+<th><strong>Importance</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identify the gearmotor's coil resistance from the datasheet, or by measuring it. Given the motor rating of 12V, find the coil resistance R using V=IR.</td>
+<td><em>Stall current is the current that goes through the motor's windings purely as a function of its internal coil resistance (rather than its motion). Manufacturers often test the stall current by clamping or locking the rotor and measuring the current. Given the driving voltage, this enables them to determine the coil resistance of a motor.</em></td>
+</tr>
+<tr>
+<td>note: the DCM-416 Gearmotor's resistance is ~320 Ohm</td>
+<td></td>
+</tr>
+<tr>
+<td>Check the maximum continuous drain current for the <strong><em>AOTF2618L</em></strong> from the datasheet.</td>
+<td><em>We need to ensure that we don't damage the transistor when turning on the motor.</em></td>
+</tr>
+<tr>
+<td></td>
+<td><em>This transistor </em><em>happens</em><em> to be oversized for the necessary current. This is not the limiting factor.</em></td>
+</tr>
+<tr>
+<td>Identify the worst-case $ R_{ds(on)}$ of the MOSFET when turned (use Figure 3, and pick the worst case)</td>
+<td><em>The $ R_{ds(on)}$ value corresponds to the resistance inside the MOSFET, and helps us understand how much energy will get dumped into heat by it when turned on.</em></td>
+</tr>
+<tr>
+<td>Identify the maximum voltage you can set the power supply to. Given the motor's coil resistance R and the MOSFET's maximum continuous current from above, use V=IR again to solve for V</td>
+<td><em>Setting the voltage below this limit will limit the current going through the motor when it starts up and prevent damage to the MOSFET.</em></td>
+</tr>
+<tr>
+<td>Identify the transistor's maximum Gate-Source Voltage ($ V_{GS} $)</td>
+<td><em>The Drain/Source voltage corresponds to the input / logic-level / switching voltage. Going over this value will damage the transistor</em></td>
+</tr>
+<tr>
+<td>Identify the transistor's maximum Drain-Source Voltage ($ V_{DS} $)</td>
+<td><em>The Drain/Sourceink voltage corresponds to the output / driving voltage of the motor. Going over this value will damage the transistor.</em></td>
+</tr>
+<tr>
+<td>Look at Figure 5 (On-Resistance vs.&nbsp;Gate-Source Voltage) on page 3 of the <strong><em>AOTF2618L</em></strong> datasheet. Using the worst-case line, what is the resistance of the device at $ V_{GS}$=3.3V? What about at $ V_{GS}$=5V? <br> CAN YOU USE THIS MOSFET AT 3.3V?</td>
+<td><em>MOSFETs also have a nonzero resistance when on. The higher the internal resistance of the transistor, the more it heats up, and the less power that gets delivered to the load. Heat can damage electrical components just as much as electricity.</em></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>Assemble the circuit below using your <strong><em>AOTF2618L</em></strong> MOSFET that can supply current through the gear motor.  You can use the benchtop supply powered at <strong>VDD=9-12V</strong> and the 5V supply you developed in ICC1, two power benchtop supplies (<strong>VDD=9-12V</strong>, 5V), or the power supply included in your kit (<strong>VDD=9V</strong>) with the 5V supply you developed in ICC1.</p>
+<blockquote>
+<p><em><strong>Caution!</strong> If you are building at home, make sure the power supply you are using for VDD is capable of sourcing at least the stall current of the motor.</em></p>
+</blockquote>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image22.png" data-desc-position="bottom"><img alt="Figure 1: MOSFET switching circuit" src="image22.png" style="max-height:200px;"></a></p>
+<p><em><strong>Figure 1:</strong> MOSFET Switching Circuit</em></p>
+</li>
+<li>
+<p>Demonstrate that your motor is moving.</p>
+</li>
+</ol>
+<blockquote>
+<p>Do not dismantle your circuit after the checkoff. You will need it for the next assignment.</p>
+</blockquote>
+<h3 id="h-bridge-motor-controller-layout">H-Bridge Motor Controller Layout</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Critical Information and Concepts</strong></th>
+<th style="text-align: left;"><strong>Importance</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1. Identify the maximum voltage PVCC of the motor driver.</td>
+<td style="text-align: left;">The motor's driving voltage will need to be checked again against this new driver, in order to prevent damage to the H-bridge.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2. Identify the motor driver's maximum continuous current per channel.</td>
+<td style="text-align: left;">You need to check whether the FAN8100N can output enough current through a single channel to drive the motor.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3. Identify the maximum voltage you can set the power supply to for this step. Given the motor's coil resistance R found previously and the FAN8100N's maximum continuous current found previously, use V=IR again to solve for V.</td>
+<td style="text-align: left;">You will be limited <em>either</em> by the motor driver's <em>maximum voltage</em> limit <strong><em>or</em></strong> its <em>maximum current</em> limit. Select the lower of the two values found in step 1 and 3.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4. Look at page 1 of the <strong><em>FAN8100N</em></strong> datasheet, as well as the internal block diagram. Do you need to include external flyback diodes or is this handled by the IC?</td>
+<td style="text-align: left;">This relates to circuit protection, and is a common difference between motor drivers. For example, the L293D motor driver chip includes diodes, while the L293E does not. Be careful when designing your own circuits.</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image21.png" data-desc-position="bottom"><img alt="Figure 2: H-Bridge Circuit" src="image21.png" style="max-height:200px;"></a></p>
+<p><em><strong>Figure 2:</strong> H-Bridge Circuit</em></p>
+<ol>
+<li>Set your power supply to below the new voltage just found above. You can also use the benchtop power supply instead.</li>
+<li>Build the motor driver circuit in Figure 2 using your <strong><em>FAN8100N</em></strong> IC.</li>
+<li>Drive the motor at your station. Look at the logic diagram on page 7 of the FAN8100N datasheet. Demonstrate that by powering FORWARDA/B and REVERSEA/B pins in different combinations you can generate the behaviors in the table.</li>
+<li>Bring your circuits in for error-checking and verification.</li>
+</ol>
+<blockquote>
+<p>Do not dismantle your circuit after the checkoff. You will need it for the next assignment.</p>
+</blockquote>
+<h2 id="demonstration-of-proficiency-in-pairs">Demonstration of Proficiency in Pairs</h2>
+<p>In class, demonstrate the following <strong>live</strong> to a member of the Teaching Team by the end of class:</p>
+<ol>
+<li>Your MOSFET circuit fully constructed on your breadboard</li>
+<li>Confirmation of single-direction motor rotation when the MOSFET is switched on</li>
+<li>Your H-bridge circuit fully constructed on your breadboard</li>
+<li>Confirmation of dual-direction motor rotation when the MOSFET is switched on</li>
+</ol>
+<p><strong>A live demonstration by the end of class is required. No late demonstrations will be accepted.</strong></p>
+<h2 id="canvas-submission">Canvas Submission</h2>
+<p><strong>No Canvas submission is required.</strong></p>
+<h2 id="rubric">Rubric</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Item</strong></th>
+<th style="text-align: left;"><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1. Fully Constructed MOSFET Circuit</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">2. Successful Demonstration of Working MOSFET Driver</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">3. Fully Constructed H-Bridge Circuit</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr>
+<td style="text-align: left;">4. Successful Demonstration of Working H-Bridge</td>
+<td style="text-align: left;">20</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: left;"><strong>50</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="devices">Devices</h2>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image11.jpg" data-desc-position="bottom"><img alt="" src="image11.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image13.jpg" data-desc-position="bottom"><img alt="" src="image13.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image1.jpg" data-desc-position="bottom"><img alt="" src="image1.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Digital Multimeter</td>
+<td>Oscilloscope</td>
+<td>Power Supply</td>
+</tr>
+<tr>
+<td>(Optional)</td>
+<td>(Not Used)</td>
+<td>(Used)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image2.jpg" data-desc-position="bottom"><img alt="" src="image2.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image20.jpg" data-desc-position="bottom"><img alt="" src="image20.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image19.jpg" data-desc-position="bottom"><img alt="" src="image19.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Function Generator</td>
+<td>Waveform Generator</td>
+<td>Soldering Iron</td>
+</tr>
+<tr>
+<td>(Not Used)</td>
+<td>(Not Used)</td>
+<td>(Used)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="probes">Probes</h3>
+<table>
+<thead>
+<tr>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image18.jpg" data-desc-position="bottom"><img alt="" src="image18.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image16.jpg" data-desc-position="bottom"><img alt="" src="image16.jpg"></a></th>
+<th><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image10.jpg" data-desc-position="bottom"><img alt="" src="image10.jpg"></a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oscilloscope</td>
+<td>Digital Multimeter</td>
+<td>Soldering Iron</td>
+</tr>
+<tr>
+<td>(Not Used)</td>
+<td>(Optional)</td>
+<td>(Used)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="faq">FAQ</h2>
+<p><strong>Q:</strong> What if I need more current than one channel of my motor driver can give me?</p>
+<p><strong>A:</strong> Some chips let you combine multiple channels together to increase the current-handling capability. In the case of the FAN8100N, you can wire the A and B channels of the IC together. It works like this:</p>
+<ol>
+<li>Connect FORWARDA and FORWARDB pins together</li>
+<li>Connect REVERSEA and REVERSEB pins together</li>
+<li>Connect OUT1A and OUT1B pins together</li>
+<li>Connect OUT2A and OUT2B pins together</li>
+<li>Connect the combined OUT1A/B to one side of your motor</li>
+<li>Connect the combined OUT2A/B to the other side of your motor</li>
+</ol>
+<blockquote>
+<p><em><strong>Caution:</strong> Wiring outputs together is possible for the FAN8100N, but not necessarily every motor driver chip. Please read each datasheet carefully.</em></p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2024 Dan Aukes and Shawn Jordan
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
