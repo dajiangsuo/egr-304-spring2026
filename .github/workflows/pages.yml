@@ -26,28 +26,11 @@ jobs:
         requirements: 'requirements.txt' # option
         configfile: 'mkdocs.yml' # option
 
-    - name: Deploy
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.BB_SECRET }}
-        EXTERNAL_REPOSITORY: bitbucket.org:egr304-oc/egr304-oc.bitbucket.io.git
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: ./site
-        GIT_SSH_COMMAND: "ssh -o IdentityFile=~/.ssh/id_ed25519 -o StrictHostKeyChecking=no"
-      run: |
-        mkdir -p ~/.ssh
-        echo "$ACTIONS_DEPLOY_KEY" > ~/.ssh/id_ed25519
-        chmod 600  ~/.ssh/id_ed25519
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: './site'
 
-        git config --global user.name "danaukes"
-        git config --global user.email "danaukes@danaukes.com"
-
-        git clone git@$EXTERNAL_REPOSITORY 
-
-        cd "egr304-oc.bitbucket.io"
-
-        git rm -r *
-        cp -r ../site/* ./
-        git add *
-        git commit -m "automated push"
-        git remote -v
-        git push
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
