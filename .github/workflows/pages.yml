@@ -1,9 +1,3 @@
-# derived from 
-#<https://github.com/marketplace/actions/mkdocs-action>
-#<https://gist.github.com/liflovs/f2a950dadcca25a0dbdfe10f53f5c838>
-#<https://stackoverflow.com/questions/64374179/how-to-push-to-another-repository-in-github-actions>
-#<https://stackoverflow.com/questions/41714882/git-how-to-clone-with-ssh-key-username>
- 
 name: mkdocs-build
 
 on:
