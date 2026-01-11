@@ -87,7 +87,7 @@ You must demonstrate with your partner proficiency in:
     1. Review [pages 62-63 of the DMM manual](https://www.dropbox.com/s/futmq59a8ftekqs/Agilent_DMM_34461A.pdf?dl=0) to learn how to measure DC current. Then, turn the power supply back on and ***briefly*** measure the current going through the resistor with the DMM. **Be careful, the resistor and/or voltage regulator will get hot.**<br> *This reading confirms how much current the regulator can supply.*
     1. Measure the resistance across the two poles used in the potentiometer. This should be done by removing the potentiometer from the circuit before measuring it with the multimeter.  You can then replace it with an equivalent resistance using fixed resistors and re-test.
 
-   > In HW1, you will **replace** the potentiometer with a fixed resistor, so be sure to write down the value you obtained up with before the end of class.
+   > In Part 2, you will **replace** the potentiometer with a fixed resistor, so be sure to write down the value you obtained before the end of class.
 
 ## Individual Demonstration of Proficiency
 
@@ -100,11 +100,9 @@ In class, demonstrate the following **live** to a member of the teaching team by
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Part 2: Power Supply Schematic Design
 
-> **This is an individual homework assignment** but you may work with others to determine how to complete the assignment.  All work demonstrated in checkoff must be completed by you on your own board.
-
 ## Introduction
 
-In this assignment, you will use ECAD design tools to draw your first circuits for EGR304.
+In this Part, you will use ECAD design tools to draw your first circuits for EGR304.
 
 You must individually demonstrate proficiency in:
 
@@ -180,7 +178,7 @@ Cadence is a professional-level industry-standard tool that takes time to downlo
     >
     > *Cadence:*Follow the instructions for [Packaging Cadence Files for Submission](https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/)
 
-## Part 2. Individual Demonstration of Proficiency
+## Individual Demonstration of Proficiency
 
 You must complete a live demonstration individually, either in office hours or in class if time permits. Demonstrations can be done up to the last office hours on the due date noted in Canvas.  **No late demonstrations will be accepted**
 
