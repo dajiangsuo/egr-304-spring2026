@@ -1,9 +1,9 @@
 ---
-title: 304 LAB 1 PT.1 -- Power Supplies, Voltage Regulators, & Benchtop Multimeters
+title: 304 LAB 1 -- Power Supplies, Voltage Regulators, Benchtop Multimeters, & Power Supply Schematic Design 
 ---
-
 > This assignment is a ***paired in-class checkoff***. An **individual** live demonstration is required. You may work in pairs (**one** partner), but must individually demonstrate your working breadboard.
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Part 1: Power Supplies, Voltage Regulators, & Benchtop Multimeters
 ## Objectives
 
 In this assignment, you will learn how to use benchtop power supplies and benchtop multimeters to measure voltage, as well as how to use a datasheet to properly design an adjustable linear voltage regulator circuit to output 5V. This voltage is one of the most common for embedded systems, and will be used in your upcoming assignments.
@@ -87,7 +87,7 @@ You must demonstrate with your partner proficiency in:
 
    > In HW1, you will **replace** the potentiometer with a fixed resistor, so be sure to write down the value you obtained up with before the end of class.
 
-## Part 2. Individual Demonstration of Proficiency
+## Individual Demonstration of Proficiency
 
 In class, demonstrate the following **live** to a member of the teaching team by the end of class:
 
@@ -95,24 +95,8 @@ In class, demonstrate the following **live** to a member of the teaching team by
 1. DMM measurement of the output voltage of the regulator circuit under no-load conditions.
 1. DMM measurement of the output voltage of the regulator circuit under 5.1Ω load.
 
-**A live demonstration by the end of class is required. No late demonstrations will be accepted.**
-
-## Canvas Submission
-
-**No Canvas submission is required.**
-
-## Grading for PT.1
-
-| **Demonstration**                    | **Points** |
-| ------------------------------------ | ---------- |
-| 1. Completed breadboard              | 10         |
-| 2. 5V no-load output DMM measurement | 20         |
-| 3. 5V loaded output DMM measurement  | 20         |
-| **Total**                            | **50**     |
-
----
-title: 304 LAB 1 PT.2 -- Power Supply Schematic Design
----
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Part 2: Power Supply Schematic Design
 
 > **This is an individual homework assignment** but you may work with others to determine how to complete the assignment.  All work demonstrated in checkoff must be completed by you on your own board.
 
