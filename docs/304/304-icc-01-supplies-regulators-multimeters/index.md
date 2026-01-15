@@ -193,15 +193,15 @@ Follow the instructions for packaging your schematic ([KiCad$^1$](https://embedd
 
 ## Grading For PT.2
 
-| **Item**                                                    | **Points** |
-| ----------------------------------------------------------- | ---------- |
-| Demonstration 1: Completed, updated breadboard              | 25         |
-| Demonstration 2: 5V small-load output DMM measurement       | 50         |
-| Custom global library file created and included in ZIP file | 25         |
-| Custom voltage regulator symbol included in custom library  | 25         |
-| Schematic accurately depicted (*-5 points for each error*)  | 150        |
-| Legible PDF of schematic included in submission             | 25         |
-| **Total**                                                   | **300**    |
+| **Item**                                                                         | **Points** |
+| -----------------------------------------------------------------------------    | ---------- |
+| Demonstration 1: 5V small-load output DMM measurement.                           | 25         |
+| Demonstration 2: 5V small-load output DMM measurement on updated breadboard      | 50         |
+| Custom global library file created and included in ZIP file                      | 25         |
+| Custom voltage regulator symbol included in custom library                       | 25         |
+| Schematic accurately depicted (*-5 points for each error*)                       | 150        |
+| Legible PDF of schematic included in submission                                  | 25         |
+| **Total**                                                                        | **300**    |
 
 You must submit to Canvas **and** demonstrate your solution in order to receive credit. Late submissions and demonstrations will be graded per the policy in the syllabus.
 
