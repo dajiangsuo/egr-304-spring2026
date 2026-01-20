@@ -69,7 +69,7 @@ In class, demonstrate the following **live** to a member of the Teaching Team by
 
 To individually demonstrate proficiency in installing and running the Cypress PSoC Integrated Development Environment (IDE) tools to program sample code onto a microcontroller, and to modify that code and surrounding hardware to add additional functionality.
 
-## Resources
+## Resources for part 2
 
 * Scherz, P., & Monk, S. (2016). [Practical electronics for inventors, fourth edition.](https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&ie=UTF8&qid=1470699914&sr=1-1&keywords=practical+electronics+for+inventors+4th+edition) New York: McGraw Hill. ISBN: 978-1259587542
 * [CY8CKIT-042](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/) [evaluation board](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/) [main page](https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/), which includes the Prototyping Kit Guide, Schematic, and Example Code Installer
@@ -113,9 +113,6 @@ To individually demonstrate proficiency in installing and running the Cypress PS
 ### 1.0 Getting Started
 
 In this assignment, you may use either the CY8CKIT-042 or CY8CKIT-042-BLE evaluation boards. It is recommended that you lay out the large components prior to wiring to ensure sufficient space on your breadboard.
-
-1. Complete [ICC2 - Hello, World! (PSoC)](https://suo-teaching-team.github.io/egr-304-spring2026/304/304-icc-02-hello-world-psoc/).
-
 
 ### 2.0 Onboard Button, LEDs, and Morse Code
 
