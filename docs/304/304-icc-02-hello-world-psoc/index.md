@@ -64,19 +64,6 @@ In class, demonstrate the following **live** to a member of the Teaching Team by
 
 **A live demonstration by the end of class is required. No late demonstrations will be accepted.**
 
-## Canvas Submission
-
-**No Canvas submission is required.**
-
-## Grading
-
-| **Demonstration Item**                                  | **Points** |
-| :------------------------------------------------------ | :--------- |
-| 1. Successful download of project 1                     | 10         |
-| 2. Successful demonstration of Blinking LED             | 10         |
-| 3. Successful download of project 2                     | 10         |
-| 4. Successful demonstration of Blinking LED with button | 20         |
-| **Total**                                               | **50**     |
 
 ## Devices
 
