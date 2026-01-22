@@ -191,6 +191,21 @@ Submit your packaged PSoC Creator workspace (right-click on the Workspace, selec
 
 Follow the instructions for packaging your schematic ([KiCad$^1$](https://embedded-systems-design.github.io/packaging-kicad-files-for-submission/))([Cadence](https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/)) to create a PDF and ZIP archive (including all library files) for your project. Submit **both** the PDF and ZIP archive as separate documents to this assignment on [Canvas](https://canvas.asu.edu) by the deadline in Canvas.
 
+## Grading
+
+| **Demonstration Item**                                                                                                                                                           | **Points** |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| Blinking LED Project Demonstration (Part 1)Project compiles, downloads, and LED blinks correctly on student’s board.                                                             | 25 pts     |
+| Button-Controlled LED Project Demonstration (Part 1) LED blinks only while button is pressed; correct pin and pull-up used.                                                      | 50 pts     |
+| Onboard Button + Morse Code LED (Part 2 Demonstration) Correct blink, button press detection, Morse initials (500 ms dots), and repeat timing.                                   | 75 pts     |
+| PSoC® Creator™ Archive of Workspace Minimal archive submitted correctly. Opens without errors. Contains correct device selection, Top Design, pin configuration, and source files matching the demonstrated behavior.                  | 25 pts         |
+| Updated KiCAD / Cadence custom library included in KiCad / Cadence Project ZIP file Custom library updated from HW1, saved into HW2 project, project symbol table created and included in ZIP.                                             | 25 pts         |
+| Custom PSoC® symbol added to custom library
+Custom symbol created for CY8CKIT-143A BLE module (not raw IC). Includes all header pins only, correct pin names, accurate pin types, consistent pin numbering, and student initials included in symbol name.                            | 75 pts     |
+| Legible PDF of schematic included in submission
+Clean, readable PDF schematic submitted. ZIP includes all project and library files per KiCad/Cadence packaging instructions.                                                       | 25 pts     |
+| **Total**                                                                                                                                                                         | **300 pts** |
+
 ## Devices
 
 | ![](image8.jpg)    | ![](image10.jpg) | ![](image7.jpg) |
