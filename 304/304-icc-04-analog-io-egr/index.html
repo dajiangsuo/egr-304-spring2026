@@ -20,7 +20,7 @@
 
     
       
-        <title>304 ICC4 -- Analog I/O and UART (PSoC) - EGR304-S-2026 Assignments</title>
+        <title>304 Lab 3 -- Analog I/O and UART (PSoC) - EGR304-S-2026 Assignments</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#objectives" class="md-skip">
+        <a href="#this-assignment-has-2-parts" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              304 ICC4 -- Analog I/O and UART (PSoC)
+              304 Lab 3 -- Analog I/O and UART (PSoC)
             
           </span>
         </div>
@@ -535,6 +535,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -543,18 +545,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objectives" class="md-nav__link">
+  <a href="#objectives-for-part-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Objectives
+      Objectives For Part 1
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
+  <a href="#resources-for-part-1" class="md-nav__link">
     <span class="md-ellipsis">
-      Resources
+      Resources For Part 1
     </span>
   </a>
   
@@ -685,19 +687,15 @@
   
 
 
-  <h1>304 ICC4 -- Analog I/O and UART (PSoC)</h1>
-
-<blockquote>
-<p>This assignment is a <strong><em>paired in-class checkoff</em></strong>. An <strong>individual</strong> live demonstration is required. You may work in pairs (<strong>one</strong> partner), but must individually demonstrate your working breadboard.</p>
-</blockquote>
-<h2 id="objectives">Objectives</h2>
+<h1 id="this-assignment-has-2-parts">This assignment has 2 parts</h1>
+<h2 id="objectives-for-part-1">Objectives For Part 1</h2>
 <p>Many sensors have an analog output that must be digitized using an Analog to Digital Converter (ADC) in order to use them in a microcontroller. The PSoC's ADC subsystem is the peripheral used to read analog values and convert it into a digital number for use in your program. It can be configured in a variety of ways. In this assignment, you will create an ADC component and program your microcontroller to transmit the result of reading an analog voltage measured at an input pin, using the ADC component in one of its simplest configurations.</p>
 <blockquote>
-<p>This in-class checkoff requires advance work in order to complete it within one class period. Please read through the ICC, read all datasheets, and prepare your circuits as much as possible.</p>
+<p>This in-class checkoff requires advance work in order to complete it. Please read through the Lab, read all datasheets, and prepare your circuits as much as possible.</p>
 </blockquote>
-<h2 id="resources">Resources</h2>
+<h2 id="resources-for-part-1">Resources For Part 1</h2>
 <ul>
-<li><a href="https://urldefense.com/v3/__https://www.youtube.com/watch?v=sWcAb_V-L3A__;!!IKRxdwAv5BmarQ!Y9G6h1U3pjUXWgyaRoH6UfeASxcu3k2RkcN1GX9E2Jo2CZ_2LvmtEqfcPTCDOcSy4R8zEeaTKi-DJ4nE7I-RAaiA_yo$">Video Walkthrough</a></li>
+<li><a href="https://urldefense.com/v3/__https://www.youtube.com/watch?v=sWcAb_V-L3A__;!!IKRxdwAv5BmarQ!Y9G6h1U3pjUXWgyaRoH6UfeASxcu3k2RkcN1GX9E2Jo2CZ_2LvmtEqfcPTCDOcSy4R8zEeaTKi-DJ4nE7I-RAaiA_yo$">Video Walkthrough For RT and TX Set up (using old board so you will need to use different pins)</a></li>
 <li>Scherz, P., &amp; Monk, S. (2016). <a href="https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1470699914&amp;sr=1-1&amp;keywords=practical+electronics+for+inventors+4th+edition">Practical electronics for inventors, fourth edition.</a> New York: McGraw Hill. ISBN: 978-1259587542<ul>
 <li>Analog input - Scherz &amp; Monk, Section 13.5.2</li>
 </ul>
@@ -727,9 +725,9 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Voltage regulator circuit from HW1</td>
+<td style="text-align: left;">Voltage regulator circuit from Lab.1 Part 2</td>
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">See HW1</td>
+<td style="text-align: left;">See Lab.1 Part 2</td>
 </tr>
 <tr>
 <td style="text-align: left;">Breadboard</td>
@@ -764,7 +762,6 @@
 </tbody>
 </table>
 <h2 id="prior-to-demonstration-of-proficiency">Prior to Demonstration of Proficiency</h2>
-<p><em>Complete all of the steps below prior to the demonstration of proficiency.</em></p>
 <ol>
 <li>
 <p>Study the following critical information and concepts:</p>
@@ -818,17 +815,17 @@
 </ol>
 <h3 id="creating-a-new-psoc-project-and-top-design">Creating a new PSoC project and top design</h3>
 <ol>
-<li>Open PSoC Creator, create a new workspace for ICC4 and a new project for the CY8CKIT-042. Create a blank project, and call it something descriptive like "ADC-to-UART".</li>
-<li>Refer to page 23 of the CY8CKIT-042 PSoC 4 Pioneer Kit Guide and page 34 &amp; 98 of the CY8CKIT-042-BLE-A Bluetooth Low Energy (BLE) Pioneer Kit Guide to get a sense of what you need to connect on your PSoC board to enable UART Rx and Tx. The back of your board also includes a summary of the connections required.</li>
-<li>Go to the Top Design. Add a UART module. This will automatically create a digital input pin (<code>Rx_1</code>) and digital output pin (<code>Tx_1</code>) already connected to it.</li>
+<li>Open PSoC Creator, create a new workspace for LAB 3 and a new project for the CY8CKIT-042. Create a blank project, and call it something descriptive like "ADC-to-UART".</li>
+<li>Refer to page 23 of the CY8CKIT-042 PSoC 4 Pioneer Kit Guide and page 34 &amp; 98 of the CY8CKIT-042-BLE-A Bluetooth Low Energy (BLE) Pioneer Kit Guide to get a sense of what you need to connect on your PSoC board to enable UART Rx and Tx. <the back of your board also includes a summary the connections required.></the></li>
+<li>Go to the Top Design. Add a UART module (v2.50). This will automatically create a digital input pin (<code>Rx_1</code>) and digital output pin (<code>Tx_1</code>) already connected to it.</li>
 <li>In the Top Design, add a Sequencing SAR ADC module. Open the module to configure it further.<ol>
 <li>In the General tab, set <code>Vref</code> select to <code>VDDA</code>. This is the maximum voltage that the ADC can sample. <code>VDDA</code> corresponds with the voltage on the <code>VDDA</code> pin. Also set "Single ended negative input" to <code>Vref</code>, and set the "Single ended result format" to Unsigned.</li>
-<li>In the Channels tab, set Sequenced channels to 1. You will only be using one ADC channel at this time. Make sure the mode for the remaining channel is Single-ended (not differential). Leave the INJ channel at Diff.</li>
+<li>In the Channels tab, set Sequenced channels to 1. You will only be using one ADC channel at this time. Make sure the mode for the channel 0 is Single-ended (not differential). Leave the INJ channel at Diff. Hit OK.</li>
 </ol>
 </li>
-<li>Add 1 Analog Pin to the Top Design, name it if you choose, and assign it to the port you connected the potentiometer to above. Create a wire from the Analog Pin to the input of the Sequencing SAR ADC module.</li>
+<li>Add 1 Analog Pin to the Top Design, name it if you choose, and  create a wire from the Analog Pin to the input of the Sequencing SAR ADC module. Assign it to the port you connected the potentiometer to above (look at Figure 1).</li>
 <li>Go to the "Design Wide Resources → pins" page in your workspace and select the appropriate pin numbers based on your reading in step 4 above. Select a pin for reading an analog value into your ADC as well.</li>
-<li>Compile your project to automatically generate source files for the UART and ADC modules you just added.</li>
+<li>Build your project to automatically generate source files for the UART and ADC modules you just added.</li>
 </ol>
 <h3 id="writing-code-to-output-your-initials-to-putty">Writing code to output your initials to PuTTY</h3>
 <ol>
