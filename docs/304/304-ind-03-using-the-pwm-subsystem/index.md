@@ -129,11 +129,11 @@ Follow the instructions for packaging your schematic ([KiCad$^1$](https://embedd
 | **Item**                                                                                              | **Points** |
 | ----------------------------------------------------------------------------------------------------- | ---------- |
 | Demonstration 1: Part 1 (Breathing LED)                                                               | 50         |
-| Demonstration 2: Part 2 (Analog Output)                                                               | 50         |
-| Separate ZIP file of single PSoC Lab3 Workspace including both projects                               | 50         |
+| Demonstration 2: Part 2 (Analog Output)                                                               | 75         |
+| Separate ZIP file of single PSoC Lab3 Workspace including both projects                               | 75         |
 | Legible PDF of Schematic outside of ZIP FILE *(-5 points for each mistake)*                           | 50         |
 | Separate ZIP file including updated library and new symbols *(-5 points for each mistake)*            | 50         |
-| **Total**                                                                                             | **250**    |
+| **Total**                                                                                             | **300**    |
 
 You must submit to Canvas **and** demonstrate your solution in order to receive credit. Late submissions and demonstrations will be graded per the policy in the syllabus.
 
