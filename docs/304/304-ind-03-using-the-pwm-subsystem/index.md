@@ -86,7 +86,7 @@ In this part you will use a passive RC filter to convert a switched, digital PWM
 1. Create ***both*** schematic used above, in ***one*** file. Following the resources for KiCad$^1$ or Cadence above.
     1. Create your own custom symbol for MOSFET that you are using to complete the assignment.
         * The symbol should include your initials in the symbol name *so that your **initials are visible** when the symbol is added to schematics.*
-        * Save your new symbol in the custom library you created in HW1 and updated in HW2.
+        * Save your new symbol in the custom library you created in Lab 1 and updated in Lab 2.
     1. Add all other components, including the voltage used, resistors and resistance values selected, etc.
 
     > *KiCad$^1$:* Wherever possible, use the "US" version of parts, including "R_US" instead of "R", "C_US" instead of "C", and "C_Polarized_US" instead of "C_Polarized", etc.
