@@ -538,134 +538,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#objectives-for-part-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objectives For Part 1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resources-for-part-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resources For Part 1
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parts-needed" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parts Needed
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prior-to-demonstration-of-proficiency" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prior to Demonstration of Proficiency
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prior to Demonstration of Proficiency">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-new-psoc-project-and-top-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Creating a new PSoC project and top design
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#writing-code-to-output-your-initials-to-putty" class="md-nav__link">
-    <span class="md-ellipsis">
-      Writing code to output your initials to PuTTY
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reading-an-analog-value-and-outputting-it-to-putty" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reading an analog value and outputting it to PuTTY
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#individual-demonstration-of-proficiency" class="md-nav__link">
-    <span class="md-ellipsis">
-      Individual Demonstration of Proficiency
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#canvas-submission" class="md-nav__link">
-    <span class="md-ellipsis">
-      Canvas Submission
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#rubric" class="md-nav__link">
-    <span class="md-ellipsis">
-      Rubric
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#devices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Devices
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Devices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#probes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Probes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -688,7 +560,7 @@
 
 
 <h1 id="this-assignment-has-2-parts">This assignment has 2 parts</h1>
-<h2 id="objectives-for-part-1">Objectives For Part 1</h2>
+<h1 id="objectives-for-part-1">Objectives For Part 1</h1>
 <p>Many sensors have an analog output that must be digitized using an Analog to Digital Converter (ADC) in order to use them in a microcontroller. The PSoC's ADC subsystem is the peripheral used to read analog values and convert it into a digital number for use in your program. It can be configured in a variety of ways. In this assignment, you will create an ADC component and program your microcontroller to transmit the result of reading an analog voltage measured at an input pin, using the ADC component in one of its simplest configurations.</p>
 <blockquote>
 <p>This in-class checkoff requires advance work in order to complete it. Please read through the Lab, read all datasheets, and prepare your circuits as much as possible.</p>
@@ -890,7 +762,7 @@
 <p>Compile, download, and run your code on the PSoC. When you connect to the PSoC with PuTTY, you should see the ADC values change in PuTTY when you turn the potentiometer. <strong>Note the maximum (largest) value that can be read by the ADC. This will be needed in the future.</strong></p>
 </li>
 </ol>
-<h2 id="individual-demonstration-of-proficiency">Individual Demonstration of Proficiency</h2>
+<h2 id="individual-demonstration-of-proficiency-for-part-1">Individual Demonstration of Proficiency for part 1</h2>
 <p>In class, demonstrate the following <strong>live</strong> to a member of the Teaching Team by the end of class:</p>
 <ol>
 <li>
@@ -901,8 +773,283 @@
 </li>
 </ol>
 <p><strong>A live demonstration by the end of class is required. No late demonstrations will be accepted.</strong></p>
+<h1 id="objectives-for-part-2">Objectives For Part 2</h1>
+<p>The purpose of this assignment is to understand how Op-Amps can be used to amplify the current change in a device and output it as a voltage. We will be building two circuits: an inverting amplifier, and a noninverting amplifier, and learning about the differences. The signal you read will be derived from Lab 3's PWM Output</p>
+<p><strong>An individual live demonstration of Parts 3, 4, &amp; 5 (which includes Parts 1 and 2) of this assignment is required.</strong></p>
+<h2 id="walkthrough-video-thanks-milan">Walkthrough Video (Thanks Milan!)</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=sMMXunHu-to&amp;feature=youtu.be" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="resources-for-part-2">Resources For Part 2</h2>
+<ul>
+<li><a href="https://embedded-systems-design.github.io/enable-floating-point-support/">Enable floating point support</a> in PSoC Creator</li>
+<li>Videos<ul>
+<li>Oscilloscope output: <a href="https://youtu.be/JBDF59Gd5ks">https://youtu.be/JBDF59Gd5ks</a></li>
+</ul>
+</li>
+<li>Scherz, P., &amp; Monk, S. (2016). <a href="https://www.amazon.com/Practical-Electronics-Inventors-Fourth-Scherz/dp/1259587541/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1470699914&amp;sr=1-1&amp;keywords=practical+electronics+for+inventors+4th+edition">Practical electronics for inventors, fourth edition.</a> New York: McGraw Hill. ISBN: 978-1259587542 <em>(</em><em>many</em><em> circuit design resources)</em><ul>
+<li>Chapter 8: Operational Amplifiers</li>
+</ul>
+</li>
+<li><strong>Oscilloscopes</strong><ul>
+<li>Scherz &amp; Monk, Chapter 7.4</li>
+<li><a href="http://esdresources.blogspot.com/2016/01/peralta-103-resources.html">Agilent MSO-X 4024A Oscilloscope User's Guide, pages 35-42 (Auto Scale) and pages 256-264 (Time Measurements)</a> <em>-or-</em></li>
+<li><a href="http://esdresources.blogspot.com/2016/01/peralta-103-resources.html">Agilent MSO 7054A Oscilloscope User's Guide, page 177 (AutoScale) and pages 192-205 (Time Measurements)</a></li>
+</ul>
+</li>
+<li>Canvas discussion board</li>
+<li>CY8CKIT-042 evaluation board (<a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042/">main page</a>) (<a href="https://www.infineon.com/dgdl/Infineon-CY8CKIT-042_PSoC_4_Pioneer_Kit_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0eeec6a57e1e">kit guide</a>)</li>
+<li>CY8CKIT-042-BLE evaluation board (<a href="https://www.infineon.com/cms/en/product/evaluation-boards/cy8ckit-042-ble-a/">main page</a> / <a href="https://www.infineon.com/dgdl/Infineon-CY8CKIT-042-BLE-A_Bluetooth_Low_Energy_Pioneer_Kit_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0efc8fdb12b6">kit guide</a>)</li>
+</ul>
+<h2 id="parts-tools-needed">Parts &amp; Tools Needed</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Item</strong></th>
+<th style="text-align: left;"><strong>Quantity</strong></th>
+<th style="text-align: left;"><strong>Detail</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">LM324N</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">(<a href="https://www.digikey.com/en/products/detail/texas-instruments/LM324N/277627">Digikey</a> / <a href="https://www.ti.com/lit/ds/symlink/lm224.pdf?HQS=dis-dk-null-digikeymode-dsf-pf-null-wwe&amp;ts=1664291051389">datasheet</a> )</td>
+</tr>
+<tr>
+<td style="text-align: left;">DAC low-pass filter circuit from Lab 3 Part 2</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">See Lab 3</td>
+</tr>
+<tr>
+<td style="text-align: left;">Voltage Regulator circuit from Lab 1 <em>(optional)</em></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">See Lab 1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Resistors</td>
+<td style="text-align: left;">multiple</td>
+<td style="text-align: left;">2 x 10 kΩ and 2 x 1 kΩ</td>
+</tr>
+<tr>
+<td style="text-align: left;">Potentiometers</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">10 kΩ</td>
+</tr>
+<tr>
+<td style="text-align: left;">Breadboard</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Jumper wire</td>
+<td style="text-align: left;">many</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Benchtop Oscilloscope</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Benchtop Power Supply</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="prior-to-verification">Prior to Verification</h2>
+<h3 id="psoc-preparation">PSoC Preparation</h3>
+<blockquote>
+<p><strong>Before you Start:</strong> Confirm that your pioneer board power jumper is set to 5V to ensure full 0-5V operation.</p>
+<p>CY8CKIT-042: See Section 4.3.3 of the kit guide, along with Figures 4-1 and 4-4</p>
+<p>CY8CKIT-042-BLE: See Section 5.1.2 of the kit guide, along with Figures 1-2 and 5-1.</p>
+</blockquote>
+<ol>
+<li>Copy the lab 3 "PWMAnalog" project into a new workspace named "Lab 4" (you will be using the low-pass filter setup for this part)</li>
+<li><a href="https://embedded-systems-design.github.io/enable-floating-point-support/">Modify the project</a> to enable floating point number printing support in PSoC Creator.</li>
+<li>Open <code>main.c</code>. Replace the contents with the following lines, then compile and download:<pre><code>#include "project.h"
+#include "math.h"
+
+#define PI 3.141592
+
+float frequency = 10; //Hz
+float offset = 2.8; //Volts
+float amplitude = .25; //Voltage
+
+long time_milli = 0;
+float voltage = 0;
+int out = 0;
+int DAC_max = 0xff;
+float V_max = 5.0;
+
+int main(void)
+{
+    CyGlobalIntEnable;
+    PWM_1_Init();
+    PWM_1_Start();
+
+    for(;;)
+    {
+        time_milli+=1;
+        voltage = (amplitude*sin(2.0*PI*frequency*time_milli/1000))+offset;
+        out = (int)(voltage/V_max*DAC_max);
+        PWM_1_WriteCompare(out);
+        CyDelay(1);
+    }
+}
+</code></pre>
+</li>
+</ol>
+<h3 id="circuit-preparation">Circuit Preparation</h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="image2.png" data-desc-position="bottom"><img alt="" src="image2.png" style="max-height:200px;"></a></p>
+<p><em><strong>Figure 1:</strong> Inverting and noninverting circuits</em></p>
+<ol>
+<li>Construct the circuit in Figure 1 above.</li>
+<li>Connect the output of the low-pass filter on your breadboard from HW3 to the positive input to the op-amp's "A" circuit. ("V_low_pass_in" connected to U1A's pin 3, see Figure 1 above).</li>
+</ol>
+<h3 id="oscilloscope-setup">Oscilloscope Setup</h3>
+<ol>
+<li>Turn on the oscilloscope<ol>
+<li>Turn on channel 1, 2, and 3; turn off all other channels.</li>
+<li>Set the Gain for all channels to 2 V/div</li>
+<li>Set the offset for all channels to zero.</li>
+</ol>
+</li>
+<li>Connect the channel 1 oscilloscope probe to the "V_low_pass_in" signal on your breadboard.</li>
+<li>Connect the grounded alligator clip of the channel 1 oscilloscope probe to the ground rail of your breadboard.</li>
+<li>Using the oscilloscope's measurement tool, add a measurement to measure the peak-to-peak voltage, average voltage, and frequency on channel 1.</li>
+<li>Verify that the settings are correct using the oscilloscope. Adjust the time window until you see multiple waveforms on channel 1.</li>
+</ol>
+<h3 id="inverting-op-amp-circuit">Inverting Op-Amp Circuit</h3>
+<ol>
+<li>Connect the signal coming from Vout1 to the channel 2 oscilloscope probe, as noted.</li>
+<li>Connect the grounded alligator clip of the channel 2 oscilloscope probe to the ground rail of your breadboard.</li>
+<li>Using the measurement tool, add a measurement to measure the peak-to-peak voltage, average voltage, and frequency on channel 2</li>
+<li>Adjust the (RV1) potentiometer and the "offset" variable in your code until you achieve the maximum gain without cutting off the output signal read on channel 2 of the oscilloscope.</li>
+<li>Compare the output and measurements of channel 1 and 2. How do they differ?</li>
+</ol>
+<h3 id="non-inverting-op-amp-circuit">Non-inverting Op-Amp Circuit</h3>
+<ol>
+<li>Code changes: Update the existing line in your code to support voltage conversion:</li>
+</ol>
+<p><code>float offset = .75;</code></p>
+<ol>
+<li>Compile and download your changes to the PSoC</li>
+<li>Connect the signal coming from Vout2 above (in Figure 1 above) to the channel 3 oscilloscope probe.</li>
+<li>Connect the grounded alligator clip of the channel 3 oscilloscope probe to the ground rail of your breadboard.</li>
+<li>Using the measurement tool, add a measurement to measure the peak-to-peak voltage, average voltage, and frequency on channel 3</li>
+<li>Adjust the potentiometer and the "offset" variable in your code until you achieve the maximum gain without cutting off the output signal read on channel 2 of the oscilloscope.</li>
+<li>Compare the output and measurements of channel 1 and 3. How do they differ?</li>
+</ol>
+<h2 id="individual-demonstration-of-proficiency">Individual Demonstration of Proficiency</h2>
+<p>You must complete the demonstration individually, either in office hours or in class if time permits. <strong>Demonstrations can be done up to the last office hours on the due date noted in Canvas. This assignment can not be demonstrated on Zoom on Saturdays due to the need for an oscilloscope.</strong>  <strong>No late demonstrations will be accepted</strong></p>
+<ol>
+<li>Properly set oscilloscope display settings on channels 1, 2, and 3.</li>
+<li>Properly set oscilloscope measurement settings on channels 1, 2, and 3.</li>
+<li>Properly controlled sinusoidal analog signal on channel 1, verified by oscilloscope.</li>
+<li>Inverting op-amp: Properly amplified output signal on channel 2, verified by oscilloscope.</li>
+<li>Non-Inverting op-amp: Properly amplified output signal on channel 3, verified by oscilloscope.</li>
+</ol>
+<p><strong>Successful demonstration of Parts 3, 4, and 5 is sufficient for demonstrating all five parts.</strong></p>
+<h2 id="schematic">Schematic</h2>
+<h3 id="resources">Resources</h3>
+<ul>
+<li>KiCad<span class="arithmatex">\(^1\)</span> <a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html">Getting Started</a> Pages on the KiCad<span class="arithmatex">\(^1\)</span> website:<ul>
+<li>Introduction to KiCad<span class="arithmatex">\(^1\)</span>: <a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#download-and-install-kicad">Download and Install</a></li>
+<li><a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#basic_concepts_and_workflow">Basic Concepts and Workflow</a></li>
+<li><a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#tutorial_part_1_project">Tutorial 1: Project</a></li>
+<li><a href="https://docs.kicad.org/6.0/en/getting_started_in_kicad/getting_started_in_kicad.html#tutorial_part_2_schematic">Tutorial 2: Schematic</a></li>
+</ul>
+</li>
+<li><a href="https://embedded-systems-design.github.io/kicad/kicad-schematic-design/">KiCad<span class="arithmatex">\(^1\)</span></a> schematic posts:<ul>
+<li><a href="https://embedded-systems-design.github.io/kicad-symbol-creation/">Symbol Creation</a></li>
+<li><a href="https://embedded-systems-design.github.io/kicad-schematic-capture/">Schematic Capture</a></li>
+<li><a href="https://embedded-systems-design.github.io/kicad-common-pin-types/">Common Pin Types and their Meanings</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://embedded-systems-design.github.io/cadence/">Cadence</a> posts</p>
+<ul>
+<li><a href="https://embedded-systems-design.github.io/creating-a-custom-library-in-cadence/">Creating a custom library in Cadence</a></li>
+<li><a href="https://embedded-systems-design.github.io/creating-a-custom-schematic-symbol-in-cadence/">Creating a custom schematic symbol in Cadence</a></li>
+<li><a href="https://embedded-systems-design.github.io/creating-a-new-project-in-cadence/">Creating a new project in Cadence</a></li>
+</ul>
+</li>
+<li>
+<p>Create a schematic for both of the circuits used above. Following the resources for KiCad<span class="arithmatex">\(^1\)</span> or Cadence above, duplicate the op-amp circuits that you built.</p>
+<ol>
+<li>You may use the LM324 op-amp included in the KiCad<span class="arithmatex">\(^1\)</span> symbol library.</li>
+<li>Add all other components, including the voltage used, resistors and resistance values selected, etc.</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p><em>KiCad<span class="arithmatex">\(^1\)</span>:</em> Wherever possible, use the "US" version of parts, including "R_US" instead of "R", "C_US" instead of "C", and "C_Polarized_US" instead of "C_Polarized", etc.</p>
+<p><em>Kicad<span class="arithmatex">\(^1\)</span>:</em> Like the US/International part symbol differences, make sure you use "earth" ground for the ground symbol rather than the default "GND" symbol.</p>
+</blockquote>
+<ol>
+<li>Export your schematic to PDF</li>
+</ol>
+<blockquote>
+<p><em>KiCad<span class="arithmatex">\(^1\)</span>:</em> Follow the instructions for <a href="https://embedded-systems-design.github.io/packaging-kicad-files-for-submission/">Packaging KiCad<span class="arithmatex">\(^1\)</span> Files for Submission</a></p>
+<p><em>Cadence:</em>Follow the instructions for <a href="https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/">Packaging Cadence Files for Submission</a></p>
+</blockquote>
+<ol>
+<li>Package your files for submission to Canvas</li>
+</ol>
 <h2 id="canvas-submission">Canvas Submission</h2>
-<p><strong>No Canvas submission is required.</strong></p>
+<p>Submit the items below to Canvas by the deadline given (in Canvas). <strong>Do not submit screenshots.</strong> <em>Do not submit links to Google documents.</em> It is your responsibility to ensure that your submission to Canvas was successful. Late Canvas submissions will be graded per the policy in the syllabus. No credit will be awarded for assignments not submitted via Canvas.</p>
+<h3 id="psoc-creator-files">PSoC Creator Files</h3>
+<p>Submit your packaged PSoC Creator workspace (right-click on the Workspace, select "Archive Workspace/Project..." from the contextual menu, and select a Minimal archive) in ZIP format to this assignment on <a href="http://canvas.asu.edu">Canvas</a> by the deadline in Canvas. Do not submit links to Google documents.</p>
+<h3 id="schematic-files">Schematic Files</h3>
+<p>Follow the instructions for packaging your schematic (<a href="https://embedded-systems-design.github.io/packaging-kicad-files-for-submission/">KiCad<span class="arithmatex">\(^1\)</span></a>)(<a href="https://embedded-systems-design.github.io/packaging-cadence-files-for-submission/">Cadence</a>) to create a PDF and ZIP archive (including all library files) for your project. Submit <strong>both</strong> the PDF and ZIP archive as separate documents to this assignment on <a href="https://canvas.asu.edu">Canvas</a> by the deadline in Canvas.</p>
+<h2 id="grading">Grading</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Item</strong></th>
+<th><strong>Points</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Demonstration Part 1: Oscillocope Display Settings</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Demonstration Part 2: Oscilloscope Measurement Settings</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Demonstration Part 3: Sinusoidal Analog Signal</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Demonstration Part 4: Amplified Inverted Output Signal</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Demonstration Part 5: Amplified Non-Inverted Output Signal</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Separate ZIP file of single PSoC HW4 Workspace including all projects</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Legible PDF of Schematic <em>(-5 points for each mistake)</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td>Separate ZIP file including updated library and new symbols <em>(-5 points for each mistake)</em></td>
+<td>50</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>300</strong></td>
+</tr>
+</tbody>
+</table>
 <h2 id="rubric">Rubric</h2>
 <table>
 <thead>
